@@ -15,19 +15,45 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const header = (
-    <header>
-      <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
-        <img
-          src="/logo.jpg"
-          width={40}
-          height={40}
-          className="mx-auto rounded-full"
-        />
-        <Link href="/">
-          <h1 className="text-3xl text-white font-bold">IndieCoder Blog</h1>
-        </Link>
-        <p className="text-slate-300">Welcome to my blog.</p>
-      </div>
+    <header className="mb-4">
+      <nav className="flex items-center justify-between flex-wrap p-1 w-full">
+        <div className="flex items-center flex-no-shrink mr-6">
+          <a
+            className="hover:text-slate-500 text-black hover:no-underline"
+            href="#"
+          >
+            <span className="text-2xl pl-2">Indie Coder</span>
+          </a>
+        </div>
+
+        <div
+          className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden pt-6 lg:pt-0"
+          id="nav-content"
+        >
+          <ul className="list-reset lg:flex justify-end flex-1 gap-5 items-center">
+            <li className="">
+              <a className="inline-block hover:underline" href="#">
+                About
+              </a>
+            </li>
+            <li className="">
+              <a className="inline-block hover:underline" href="#">
+                Blog
+              </a>
+            </li>
+            <li className="">
+              <a className="inline-block hover:underline" href="#">
+                Projects
+              </a>
+            </li>
+            <li className="">
+              <a className="inline-block hover:underline" href="#">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
   );
   const footer = (
@@ -40,11 +66,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="mx-auto max-w-2xl px-6">
-          {header}
-          {children}
-          {footer}
-        </div>
+        {header}
+        {children}
+        {footer}
       </body>
     </html>
   );

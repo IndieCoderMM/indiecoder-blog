@@ -23,8 +23,10 @@ const PostPage = (props: any) => {
 
   return (
     <div>
-      <h2 className="text-2xl text-violet-500">{post.data.title}</h2>
-      <article className="prose lg:prose-xl">
+      <h2 className="text-3xl text-center text-violet-500">
+        {post.data.title}
+      </h2>
+      <article className="prose lg:prose-xl mx-auto">
         <Markdown>{post.content}</Markdown>
       </article>
     </div>
