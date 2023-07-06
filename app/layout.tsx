@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const header = (
-    <header className="mb-4 border-b-2 md:border-none border-slate-100">
+    <header className="mb-4 border-b-2 md:border-none md:px-10 border-slate-100">
       <nav className="flex flex-col md:flex-row items-center justify-between p-1 w-full">
         <Link href="/" className="flex items-center">
           <img
@@ -29,7 +29,7 @@ export default function RootLayout({
             <Link href="about">About</Link>
           </li>
           <li className="flex-1 border-transparent border-b-2 hover:border-b-purple-600 hover:text-purple-600">
-            <Link href="blog">Blog</Link>
+            <Link href="posts">Blog</Link>
           </li>
           <li className="flex-1 border-transparent border-b-2 hover:border-b-yellow-500 hover:text-yellow-500">
             <Link href="projects">Projects</Link>
