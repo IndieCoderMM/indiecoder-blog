@@ -2,8 +2,6 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export const metadata = {
   title: 'IndieCoder MM',
   description: 'Programming Blog Page',
@@ -15,44 +13,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const header = (
-    <header className="mb-4">
-      <nav className="flex items-center justify-between flex-wrap p-1 w-full">
-        <div className="flex items-center flex-no-shrink mr-6">
-          <a
-            className="hover:text-slate-500 text-black hover:no-underline"
-            href="#"
-          >
-            <span className="text-2xl pl-2">Indie Coder</span>
-          </a>
-        </div>
+    <header className="mb-4 border-b-2 md:border-none border-slate-100">
+      <nav className="flex flex-col md:flex-row items-center justify-between p-1 w-full">
+        <Link href="/" className="flex items-center">
+          <img
+            src="/logo.jpg"
+            alt="IndieCoder Logo"
+            className="mr-3 h-9 w-auto md:h-15 border rounded-full hover:ring-1"
+          />
+          <h1 className="font-bold text-xl hover:text-slate-700">IndieCoder</h1>
+        </Link>
 
-        <div
-          className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden pt-6 lg:pt-0"
-          id="nav-content"
-        >
-          <ul className="list-reset lg:flex justify-end flex-1 gap-5 items-center">
-            <li className="">
-              <a className="inline-block hover:underline" href="#">
-                About
-              </a>
-            </li>
-            <li className="">
-              <a className="inline-block hover:underline" href="#">
-                Blog
-              </a>
-            </li>
-            <li className="">
-              <a className="inline-block hover:underline" href="#">
-                Projects
-              </a>
-            </li>
-            <li className="">
-              <a className="inline-block hover:underline" href="#">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul className="list-reset flex justify-end gap-5 items-center">
+          <li className="flex-1 border-transparent border-b-2 hover:border-b-red-500 hover:text-red-500">
+            <Link href="about">About</Link>
+          </li>
+          <li className="flex-1 border-transparent border-b-2 hover:border-b-purple-600 hover:text-purple-600">
+            <Link href="blog">Blog</Link>
+          </li>
+          <li className="flex-1 border-transparent border-b-2 hover:border-b-yellow-500 hover:text-yellow-500">
+            <Link href="projects">Projects</Link>
+          </li>
+          <li className="flex-1 border-transparent border-b-2 hover:border-b-green-600 hover:text-green-600">
+            <Link href="contact">Contact</Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );
