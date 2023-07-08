@@ -1,5 +1,5 @@
 import PostPreview from '@/components/PostPreview';
-import getPostMetaData from '@/components/getPostMetaData';
+import getPostMetaData from '@/utils/getPostMetaData';
 
 export default function PostIndex() {
   const postMetaData = getPostMetaData().sort(

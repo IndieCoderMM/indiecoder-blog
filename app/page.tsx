@@ -1,4 +1,4 @@
-import getPostMetaData from '@/components/getPostMetaData';
+import getPostMetaData from '@/utils/getPostMetaData';
 import PostPreview from '@/components/PostPreview';
 
 export default function Home() {
@@ -24,14 +24,11 @@ export default function Home() {
     </section>
   );
   return (
-    <main className="p-1 md:px-10">
-      {heroSection}
-      <section>
-        <h2 className="font-bold text-2xl mb-5">Latest Posts</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {postPreviews}
-        </div>
-      </section>
+    <main className="p-5">
+      <h2 className="font-bold text-2xl mb-5">Latest Posts</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {postPreviews}
+      </div>
     </main>
   );
 }
