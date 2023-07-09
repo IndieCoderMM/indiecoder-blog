@@ -7,7 +7,8 @@ import { usePathname } from 'next/navigation';
 const Navbar = () => {
   const currentRoute = usePathname();
 
-  const linkStyle = 'flex items-center justify-center rounded-full w-auto gap-1 px-5 py-2 text-slate-400 hover:text-primary-blue';
+  const linkStyle =
+    'flex items-center justify-center rounded-full w-auto gap-1 px-5 py-2 text-slate-400 hover:text-primary-blue';
   const activeLinkStyle = linkStyle + ' bg-light-blue';
   const linkIconStyle = 'text-3xl lg:text-4xl';
   const activeIconStyle = linkIconStyle + ' text-primary-blue';
@@ -18,7 +19,8 @@ const Navbar = () => {
         {NavLinks.map((link) => (
           <li className="flex-1 flex justify-center" key={link.key}>
             <Link
-              href={link.href} title={link.text}
+              href={link.href}
+              title={link.text}
               className={
                 currentRoute === link.href ? activeLinkStyle : linkStyle
               }

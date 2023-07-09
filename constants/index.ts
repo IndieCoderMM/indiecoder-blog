@@ -1,5 +1,11 @@
 import { BiSolidSearch } from 'react-icons/bi';
-import { BsFillHeartFill } from 'react-icons/bs';
+import {
+  BsFacebook,
+  BsFillHeartFill,
+  BsGithub,
+  BsLinkedin,
+  BsTwitter,
+} from 'react-icons/bs';
 import { FaCoffee, FaFeatherAlt, FaUserAlt } from 'react-icons/fa';
 import { HiNewspaper, HiUser, HiCodeBracketSquare } from 'react-icons/hi2';
 
@@ -37,5 +43,28 @@ export const AboutMe = [
     key: 'opensource',
     text: 'Obsessed with open-source projects. Collaborating, innovating and building cool stuff together? Count me in! 😎',
     icon: BsFillHeartFill,
+  },
+];
+
+export const SocialLinks = [
+  {
+    href: 'https://github.com/IndieCoderMM',
+    icon: BsGithub,
+    name: 'GitHub',
+  },
+  {
+    href: 'https://www.linkedin.com/in/hthantoo/',
+    icon: BsLinkedin,
+    name: 'LinkedIn',
+  },
+  {
+    href: 'https://facebook.com/',
+    icon: BsFacebook,
+    name: 'Facebook',
+  },
+  {
+    href: 'https://twitter.com/',
+    icon: BsTwitter,
+    name: 'Twitter',
   },
 ];
