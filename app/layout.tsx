@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const header = (
-    <header className="flex justify-center w-full bg-white border-b border-slate-200 p-1">
+    <header className="flex justify-center w-full bg-white border-b border-slate-200 px-2 py-1">
       <Navbar />
     </header>
   );
