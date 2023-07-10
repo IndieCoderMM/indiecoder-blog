@@ -31,7 +31,7 @@ const AboutPage = () => {
               Let&apos;s connect and collaborate. I&apos;d love to exchange
               ideas and learn from each other!
             </p>
-            <div className="flex items-center justify-center gap-10 p-5 text-3xl border rounded-lg mt-3">
+            <div className="flex items-center justify-center gap-10 py-5 px-2 text-3xl border rounded-lg mt-3">
               {SocialLinks.map((link) => (
                 <Link href={link.href} key={link.name} title={link.name}>
                   <span className="sr-only">{link.name}</span>

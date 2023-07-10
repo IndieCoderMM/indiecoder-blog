@@ -1,4 +1,4 @@
-import { BiSolidSearch } from 'react-icons/bi';
+import { RiGitRepositoryFill } from 'react-icons/ri';
 import {
   BsFacebook,
   BsFillHeartFill,
@@ -16,11 +16,17 @@ export const NavLinks = [
     href: '/projects',
     text: 'Projects',
     key: 'projects',
+    icon: RiGitRepositoryFill,
+  },
+  {
+    href: '/solutions',
+    text: 'Solutions',
+    key: 'solutions',
     icon: HiCodeBracketSquare,
   },
-  { href: '/search', text: 'Search', key: 'search', icon: BiSolidSearch },
 ];
 
+// { href: '/search', text: 'Search', key: 'search', icon: BiSolidSearch },
 // { href: '/links', text: 'Links', key: 'links', icon: HiMailOpen },
 
 export const AboutMe = [
@@ -66,5 +72,16 @@ export const SocialLinks = [
     href: 'https://twitter.com/',
     icon: BsTwitter,
     name: 'Twitter',
+  },
+];
+
+export const ProjectsData = [
+  {
+    title: 'ProjectName',
+    description: 'Description',
+    source: 'github.com',
+    star: 0,
+    lang: 'HTML',
+    category: 'web',
   },
 ];
