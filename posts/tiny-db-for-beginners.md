@@ -3,6 +3,7 @@ title: "How to Use TinyDB: A Practical Tutorial"
 subtitle: "A Beginner's Guide to Learning Database Operations with TinyDB"
 date: "2021-02-28"
 language: "mm"
+tags: ['database', 'python']
 ---
 
 ကိုယ်ပိုင် Project တွေ ရေးတဲ့အခါမှာ Data တွေကို သိမ်းဖို့ လိုလာတတ်ပါတယ်။ ဒီလိုအခါမှာ SQL လို database တစ်ခုကို သုံးလို့ရပေမယ့် ဒါတွေက Beginner တွေအတွက်တော့ သုံးဖို့ သိပ်မလွယ်ကူပါဘူး။ ကိုယ်က Data အများကြီး သိမ်းစရာမလိုရင် ရိုးရှင်းတဲ့ TinyDB ကို သုံးလိုက်တာက ကိုယ့်အလုပ်ကို ပိုပြီး လွယ်ကူမြန်ဆန်စေပါတယ်။ ဒီ Post မှာတော့ Beginner တွေ အတွက် အသင့်တော်ဆုံး Database တစ်ခုဖြစ်တဲ့ TinyDB ကို ဘယ်လိုသုံးရမလဲဆိုတာကို ပြောပြသွားမှာပါ။

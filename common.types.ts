@@ -1,9 +1,11 @@
 export interface PostMetaData {
   title: string;
   date: string;
+  cover?: string;
   subtitle: string;
   language: string;
   externalLink?: string;
+  tags: string[];
   slug: string;
 }
 

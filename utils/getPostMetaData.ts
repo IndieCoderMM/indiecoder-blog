@@ -16,9 +16,11 @@ const getPostMetaData = (): PostMetaData[] => {
       date: matterResult.data.date,
       subtitle: matterResult.data.subtitle,
       draft: matterResult.data.draft,
-      externalLink: matterResult.data.link,
       language: matterResult.data.language,
       slug: fileName.replace('.md', ''),
+      externalLink: matterResult.data.link,
+      cover: matterResult.data.cover,
+      tags: matterResult.data.tags,
     };
   });
 

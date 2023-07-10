@@ -3,6 +3,7 @@ title: "Code Your Own T-rex Runner Game with HTML, CSS and JS"
 subtitle: "Learn Game Development Basics with This Fun Project"
 date: "2022-04-15"
 language: "mm"
+tags: ['tutorial', 'javascript', 'gamedev']
 ---
 
 ဒီ Project မှာတော့ Google Chrome ရဲ့ နာမည်ကြီး ဂိမ်းလေးဖြစ်တဲ့ Chrome Dino ပုံစံ ဂိမ်းလေးကို ရေးမှာဖြစ်ပါတယ်။ ဒီ Project လေးက Web development ကို အခုမှ စလေ့လာတဲ့ Beginner‌ တွေ အတွက် ရည်ရွယ်တာဖြစ်လို့ HTML CSS ကို သိထားရုံနဲ့ လိုက်ရေးလို့ ရပါတယ်။ JS အခြေခံနည်းနည်း သိထားရင်တော့ ပိုအဆင်ပြေပါတယ်။ ဂိမ်းမှာ အသုံးပြုမယ့် Sources တွေကို အောက်မှာပေးထားတဲ့ Github link ကနေ ရယူနိုင်ပါတယ်။ ဂိမ်းလေးကို ရေးပြီးရင် သူငယ်ချင်းတွေနဲ့ Share လို့ရအောင် Github Page မှာပါ တစ်ခါတည်း တင်မှာဖြစ်ပါတယ်။

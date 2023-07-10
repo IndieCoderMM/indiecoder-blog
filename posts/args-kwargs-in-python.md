@@ -3,6 +3,7 @@ title: "Python Beyond Basics: Understanding *args and **kwargs"
 subtitle: "Dynamic Arguments and Keyword Arguments in Python Functions"
 date: "2022-03-16"
 language: "mm"
+tags: ['functional', 'python']
 ---
 
 Python program တွေကို လေ့လာတဲ့အခါ တစ်ချို့ Function definition တွေမှာ *args နဲ့ **kwargs ဆိုပြီး Parameter နှစ်ခုကို တွေ့ရတတ်ပါတယ်။ ဒီ Post မှာတော့ *args နဲ့ **kwargs က ဘာတွေလဲ၊ သူတို့ကို ဘယ်လိုသုံးရမလဲ ဆိုတာတွေကို ပြောပြပေးမှာပါ။

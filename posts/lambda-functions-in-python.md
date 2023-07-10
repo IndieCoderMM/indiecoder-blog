@@ -3,6 +3,7 @@ title: "Lambda Functions in Python"
 subtitle: "Write Efficient Python Code with Anonymous Functions"
 date: "2022-05-11"
 language: "mm"
+tags: ['functional', 'python']
 ---
 
 Lambda function တွေက Computer programming မှာ အ‌ရေးပါတဲ့ Concept တစ်ခုဖြစ်ပါတယ်။ ကျစ်လျစ်ထိရောက်တဲ့ ကုဒ်တွေကို မြန်မြန်ဆန်ဆန်နဲ့ ရေးနိုင်ဖို့ အတွက် Lambda function တွေကို သေသေချာချာ နားလည်ထားဖို့ လိုပါတယ်။ ဒီ Post မှာတော့ Lambda တွေကို Python language မှာ ဘယ်လို အသုံးပြုရမယ်ဆိုတာကို လေ့လာကြမှာ ဖြစ်ပါတယ်။

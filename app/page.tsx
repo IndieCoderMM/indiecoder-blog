@@ -9,7 +9,7 @@ export default function Home() {
     .map((post) => <PostPreview key={post.slug} {...post} />);
 
   return (
-    <>
+    <section>
       <header className="flex items-center gap-3 mb-5  text-slate-400">
         <BsGrid1X2 className="text-xl" />
         <h2 className="text-xl">
@@ -17,7 +17,7 @@ export default function Home() {
           Posts Total
         </h2>
       </header>
-      <div className="grid gap-4">{postPreviews}</div>
-    </>
+      <div className="grid gap-4 w-full max-w-xl mx-auto">{postPreviews}</div>
+    </section>
   );
 }
