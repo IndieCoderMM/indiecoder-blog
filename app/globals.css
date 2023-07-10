@@ -38,6 +38,16 @@ body {
   @apply max-w-4xl mx-auto;
 }
 
+.expandLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 4px;
