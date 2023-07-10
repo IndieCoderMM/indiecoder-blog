@@ -15,11 +15,14 @@ const getPostMetaData = (): PostMetaData[] => {
       title: matterResult.data.title,
       date: matterResult.data.date,
       subtitle: matterResult.data.subtitle,
+      draft: matterResult.data.draft,
+      externalLink: matterResult.data.link,
+      language: matterResult.data.language,
       slug: fileName.replace('.md', ''),
     };
   });
 
-  return posts;
+  return posts.filter((p) => !p.draft);
 };
 
 export default getPostMetaData;

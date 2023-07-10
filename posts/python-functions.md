@@ -2,7 +2,7 @@
 title: "Python Functions 101"
 subtitle: "Essential Concepts and Practical Examples to Learn Python Functions"
 date: "2022-02-07"
-lang: "mm"
+language: "mm"
 ---
 
 Program တစ်ခု ရေးပြီ ဆိုရင် Function တွေကို မဖြစ်မနေအသုံးပြုရပါတယ်။ Function ဆိုတာက ထပ်ခါထပ်ခါသုံးလို့ရတဲ့ ကုဒ်တွေကို ပြန်သုံးနိုင်အောင် စုစည်းထားတဲ့ block တစ်ခုပါ။ လုပ်ငန်းတစ်ခုထဲကို အတူတူလုပ်ဆောင်တဲ့ ကုဒ်တွေကို Function တွေနဲ့ Organize လုပ်ထားတဲ့ အခါမှာ Program တစ်ခုက နားလည်ရလွယ်တဲ့အတွက် error ပါနေရင်လည်း လွယ်လွယ်ကူကူ Debug လုပ်နိုင်ပါတယ်။ Function တွေရဲ့ အဓိက အသုံးဝင်တဲ့ အချက်ကတော့ Program တစ်ခုမှာ သုံးထားတဲ့ Function တွေကို အလားတူ လုပ်ငန်းတွေ လုပ်ဆောင်ဖို့အတွက် အခြား Program တစ်ခုမှာလည်း ပြန်သုံးနိုင်ပါတယ်။ ဒီလို Programming language တိုင်းမှာ အရေးပါတဲ့ Concept တစ်ခုဖြစ်တဲ့ Function တွေအကြောင်းကို လေ့လာကြမှာဖြစ်ပါတယ်။

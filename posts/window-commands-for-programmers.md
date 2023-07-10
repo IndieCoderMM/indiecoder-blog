@@ -2,7 +2,7 @@
 title: "Essential Window Commands for Programmers"
 subtitle: "Learn the Key Commands to Save Time and Simplify Workflow"
 date: "2022-01-02"
-lang: "mm"
+language: "mm"
 ---
 
 Command line ဆိုတာက Window ရဲ့ Operating system ကို တိုက်ရိုက်ချိတ်ဆက်ပြီး အလုပ်လုပ်တဲ့ ကုဒ်တွေပါ။ Window မျက်နှာပြင်ပေါ်မှာ မြင်နေရတဲ့ Icon တွေ၊ Folder တွေကို Graphical User Interface (GUI) လို့ခေါ်ပါတယ်။ ကိုယ်လုပ်ချင်တဲ့ လုပ်‌ဆောင်ချက် ကို Mouse သုံးပြီး GUI ကနေတစ်ဆင့်  အသုံးပြုရပါတယ်။ Command line ‌တွေက Mouse နဲ့ သုံးရတဲ့ လုပ်ငန်းမှန်သမျှကို ပိုပြီး မြန်ဆန်စွာနဲ့ လုပ်ဆောင်နိုင်တဲ့ အပြင် GUI ကနေ လုပ်ခွင့်ပေးမထားတဲ့ လုပ်ငန်းတွေကိုပါ အသုံးပြုနိုင်ပါတယ်။ 

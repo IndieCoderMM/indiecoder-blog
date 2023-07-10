@@ -5,7 +5,7 @@ import { ProjectInterface } from '@/common.types';
 
 const ProjectRepo = (props: ProjectInterface) => {
   return (
-    <div className="flex flex-col relative h-full border border-slate-300 rounded-md p-5 gap-3">
+    <div className="flex flex-col relative h-full border border-slate-300 rounded-md p-5 gap-3 hover:shadow">
       <header className="flex items-center flex-wrap gap-1">
         <GoRepo className="text-xl" />
         <Link
@@ -15,7 +15,7 @@ const ProjectRepo = (props: ProjectInterface) => {
         >
           {props.title}
         </Link>
-        <span className="border rounded-full px-2 py-0.5 text-sm">
+        <span className="border rounded-full px-2 py-0.5 text-xs">
           {props.category}
         </span>
       </header>
