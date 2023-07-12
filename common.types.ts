@@ -28,11 +28,14 @@ export interface CoverImage {
 }
 
 export interface Post {
-  publishedAt: string;
-  slug: string;
   title: string;
+  slug: string;
   excerpt: string;
   content: string;
+  language: string;
+  publishedAt: string;
+  originalDate?: string;
+  externalLink?: string;
   categories: Category[];
   coverImage: CoverImage;
 }

@@ -25,6 +25,7 @@ export const getPosts = async () => {
             slug
             title
             excerpt
+            content
             categories {
               name
               slug
@@ -32,6 +33,9 @@ export const getPosts = async () => {
             coverImage {
               url
             }
+            externalLink
+            language
+            originalDate
           }
         }
       }
@@ -48,10 +52,12 @@ export const getPostDetails = async (slug: string) => {
     query GetPostDetails($slug: String!) {
       post(where: { slug: $slug }) {
         publishedAt
+        originalDate
         slug
         title
         excerpt
         content
+        language
         categories {
           name
           slug

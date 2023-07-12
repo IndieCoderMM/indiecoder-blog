@@ -6,10 +6,11 @@ import {
   RiMessage3Line,
 } from 'react-icons/ri';
 import Image from 'next/image';
+import formatDate from '@/utils/formatDate';
 
 const PostPreview = (props: Post) => {
   return (
-    <div className="relative border-2 border-slate-200 rounded-sm h-full hover:shadow bg-white">
+    <div className="relative shadow-md rounded-sm h-full hover:shadow-lg bg-white">
       {props.coverImage && (
         <Image
           src={props.coverImage.url}
@@ -24,41 +25,42 @@ const PostPreview = (props: Post) => {
         <header className="font-medium text-lg text-primary-blue hover:underline expandLink">
           <h2>
             <Link
-              href={`posts/${props.slug}`}
-              // href={
-              //   props.externalLink ? props.externalLink : `posts/${props.slug}`
-              // }
+              href={
+                props.externalLink ? props.externalLink : `posts/${props.slug}`
+              }
               className="hover:underline expandLink"
             >
               {props.title}
             </Link>
-            {/* {props.externalLink && (
+            {props.externalLink && (
               <RiExternalLinkLine className="text-xl ml-1 inline" />
-            )} */}
+            )}
           </h2>
         </header>
 
         <h3 className="text-slate-500">{props.excerpt}</h3>
-        {/* <ul className="flex gap-3 text-slate-500 flex-wrap">
-          {props.tags?.map((t) => (
-            <li key={t}>#{t}</li>
+        <ul className="flex gap-3 text-slate-500 flex-wrap">
+          {props.categories?.map((category) => (
+            <li key={category.slug}>#{category.name}</li>
           ))}
-        </ul> */}
+        </ul>
 
         <div className="flexBetween text-gray-400 text-sm mt-auto">
           <div className="flexCenter gap-1">
             <RiCalendarEventLine className="text-lg" />
-            <time dateTime={props.publishedAt}>
-              {new Date(props.publishedAt).toLocaleDateString('en-us', {
-                day: '2-digit',
-                year: 'numeric',
-                month: 'short',
-              })}
+            <time
+              dateTime={
+                props.originalDate ? props.originalDate : props.publishedAt
+              }
+            >
+              {formatDate(
+                props.originalDate ? props.originalDate : props.publishedAt,
+              )}
             </time>
           </div>
           <div className="flexCenter gap-1">
             <RiMessage3Line className="text-lg" />
-            <p>mm</p>
+            <p>{props.language}</p>
           </div>
         </div>
       </section>

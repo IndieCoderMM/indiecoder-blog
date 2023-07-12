@@ -2,6 +2,7 @@ import Markdown from 'markdown-to-jsx';
 import getPostMetaData from '@/utils/getPostMetaData';
 import { BsCalendar3 } from 'react-icons/bs';
 import { getPostDetails, getPosts } from '@/services';
+import formatDate from '@/utils/formatDate';
 
 export const generateStaticParams = async () => {
   const posts = await getPosts();
@@ -14,11 +15,11 @@ const PostPage = async (props: any) => {
 
   return (
     <article>
-      <header>
-        <h2 className="text-3xl text-center text-purple-500">{post.title}</h2>
-        <div className="flex items-center gap-2 p-5 text-slate-500">
+      <header className="border-b border-slate-400">
+        <h2 className="text-3xl font-semibold text-center">{post.title}</h2>
+        <div className="flex items-center gap-2 py-5 text-slate-500">
           <BsCalendar3 />
-          {post.publishedAt}
+          {formatDate(post.originalDate ? post.originalDate : post.publishedAt)}
         </div>
       </header>
       <section className="prose lg:prose-xl mx-auto p-2">
