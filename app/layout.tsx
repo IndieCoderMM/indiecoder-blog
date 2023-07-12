@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import './globals.css';
 
 export const metadata = {
-  title: 'IndieCoder MM',
+  title: 'IndieCoder Blog',
   description: 'Programming Blog Page',
 };
 

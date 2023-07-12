@@ -17,3 +17,22 @@ export interface ProjectInterface {
   category: string;
   star: number;
 }
+
+export interface Category {
+  name: string;
+  slug: string;
+}
+
+export interface CoverImage {
+  url: string;
+}
+
+export interface Post {
+  publishedAt: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  categories: Category[];
+  coverImage: CoverImage;
+}

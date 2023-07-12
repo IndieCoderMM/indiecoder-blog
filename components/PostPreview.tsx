@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PostMetaData } from '@/common.types';
+import { Post, PostMetaData } from '@/common.types';
 import {
   RiCalendarEventLine,
   RiExternalLinkLine,
@@ -7,12 +7,12 @@ import {
 } from 'react-icons/ri';
 import Image from 'next/image';
 
-const PostPreview = (props: PostMetaData) => {
+const PostPreview = (props: Post) => {
   return (
     <div className="relative border-2 border-slate-200 rounded-sm h-full hover:shadow bg-white">
-      {props.cover && (
+      {props.coverImage && (
         <Image
-          src={props.cover}
+          src={props.coverImage.url}
           alt={`Cover of ${props.title}`}
           sizes="100vw"
           width={0}
@@ -24,31 +24,32 @@ const PostPreview = (props: PostMetaData) => {
         <header className="font-medium text-lg text-primary-blue hover:underline expandLink">
           <h2>
             <Link
-              href={
-                props.externalLink ? props.externalLink : `posts/${props.slug}`
-              }
+              href={`posts/${props.slug}`}
+              // href={
+              //   props.externalLink ? props.externalLink : `posts/${props.slug}`
+              // }
               className="hover:underline expandLink"
             >
               {props.title}
             </Link>
-            {props.externalLink && (
+            {/* {props.externalLink && (
               <RiExternalLinkLine className="text-xl ml-1 inline" />
-            )}
+            )} */}
           </h2>
         </header>
 
-        <h3 className="text-slate-500">{props.subtitle}</h3>
-        <ul className="flex gap-3 text-slate-500 flex-wrap">
+        <h3 className="text-slate-500">{props.excerpt}</h3>
+        {/* <ul className="flex gap-3 text-slate-500 flex-wrap">
           {props.tags?.map((t) => (
             <li key={t}>#{t}</li>
           ))}
-        </ul>
+        </ul> */}
 
         <div className="flexBetween text-gray-400 text-sm mt-auto">
           <div className="flexCenter gap-1">
             <RiCalendarEventLine className="text-lg" />
-            <time dateTime={props.date}>
-              {new Date(props.date).toLocaleDateString('en-us', {
+            <time dateTime={props.publishedAt}>
+              {new Date(props.publishedAt).toLocaleDateString('en-us', {
                 day: '2-digit',
                 year: 'numeric',
                 month: 'short',
@@ -57,7 +58,7 @@ const PostPreview = (props: PostMetaData) => {
           </div>
           <div className="flexCenter gap-1">
             <RiMessage3Line className="text-lg" />
-            <p>{props.language}</p>
+            <p>mm</p>
           </div>
         </div>
       </section>
