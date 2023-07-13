@@ -4,6 +4,8 @@ import { getPosts } from '@/services';
 
 export default async function Home() {
   const posts = await getPosts();
+  // TODO sort by dates
+  // posts.sort((a,b) => (new Date(a.originalDate || a.publishedAt) - new Date(b.originalDate || b.publishedAt)))
   const postPreviews = posts.map((post) => (
     <PostPreview key={post.slug} {...post} />
   ));
@@ -22,4 +24,5 @@ export default async function Home() {
   );
 }
 
-export const revalidate = 60;
+// Refresh every 6 hours
+export const revalidate = 3600 * 6;

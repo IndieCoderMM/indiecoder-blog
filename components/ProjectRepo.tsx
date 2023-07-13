@@ -6,12 +6,12 @@ import { ProjectInterface } from '@/common.types';
 const ProjectRepo = (props: ProjectInterface) => {
   return (
     <div className="flex flex-col relative h-full border border-slate-300 rounded-md p-5 gap-3 hover:shadow">
-      <header className="flex items-center flex-wrap gap-1">
+      <header className="flex items-center flex-wrap gap-1 text-slate-500">
         <GoRepo className="text-xl" />
         <Link
           href={props.link}
           target="_blank"
-          className="text-primary-blue hover:underline expandLink"
+          className="text-accent-color hover:underline expandLink"
         >
           {props.title}
         </Link>

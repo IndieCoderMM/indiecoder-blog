@@ -22,7 +22,7 @@ const PostPreview = (props: Post) => {
         />
       )}
       <section className="grid gap-2 p-3 lg:p-5">
-        <header className="font-medium text-lg text-primary-blue hover:underline expandLink">
+        <header className="font-medium text-lg text-accent-color hover:underline expandLink">
           <h2>
             <Link
               href={

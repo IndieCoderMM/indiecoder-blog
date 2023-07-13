@@ -1,12 +1,6 @@
 import { AboutMe, SocialLinks } from '@/constants';
 import Link from 'next/link';
-import {
-  BsFacebook,
-  BsFillChatDotsFill,
-  BsGithub,
-  BsLinkedin,
-  BsTwitter,
-} from 'react-icons/bs';
+import { BsFillChatDotsFill } from 'react-icons/bs';
 
 const AboutPage = () => {
   const iconStyle =
@@ -23,7 +17,7 @@ const AboutPage = () => {
           </li>
         ))}
         <li className="flex gap-4">
-          <div className={iconStyle + ' bg-primary-blue'}>
+          <div className={iconStyle + ' bg-accent-color'}>
             <BsFillChatDotsFill className="text-white" />
           </div>
           <div>
@@ -33,7 +27,12 @@ const AboutPage = () => {
             </p>
             <div className="flex items-center justify-center gap-10 py-5 px-2 text-3xl border rounded-lg mt-3">
               {SocialLinks.map((link) => (
-                <Link href={link.href} key={link.name} title={link.name}>
+                <Link
+                  href={link.href}
+                  key={link.name}
+                  title={link.name}
+                  className="hover:text-accent-color-light"
+                >
                   <span className="sr-only">{link.name}</span>
                   <link.icon className=" text-slate-500" />
                 </Link>

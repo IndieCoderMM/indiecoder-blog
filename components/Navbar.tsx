@@ -8,10 +8,10 @@ const Navbar = () => {
   const currentRoute = usePathname();
 
   const linkStyle =
-    'flex items-center justify-center rounded-full w-auto gap-1 px-5 py-2 text-slate-400 hover:text-primary-blue';
-  const activeLinkStyle = linkStyle + ' bg-light-blue';
+    'flex items-center justify-center rounded-full w-auto gap-1 px-3 py-1 text-slate-400 hover:text-accent-color';
+  const activeLinkStyle = linkStyle + ' bg-accent-color-light';
   const linkIconStyle = 'text-3xl lg:text-4xl';
-  const activeIconStyle = linkIconStyle + ' text-primary-blue';
+  const activeIconStyle = linkIconStyle + ' text-accent-color';
 
   return (
     <nav className="w-full maxContentWidth">
@@ -35,7 +35,7 @@ const Navbar = () => {
               <span
                 className={
                   currentRoute === link.href
-                    ? 'font-medium text-primary-blue'
+                    ? 'font-medium text-accent-color'
                     : 'hidden'
                 }
               >
