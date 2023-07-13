@@ -1,4 +1,4 @@
-import { Category, Post } from '@/common.types';
+import { Category, Post, Solution } from '@/common.types';
 import { request, gql } from 'graphql-request';
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT!;
@@ -13,6 +13,10 @@ interface PostsConnection {
 
 interface Categories {
   categories: Category[];
+}
+
+interface Solutions {
+  solutions: Solution[];
 }
 
 export const getPosts = async () => {
@@ -87,4 +91,22 @@ export const getCategories = async () => {
   const result = await request<Categories>(graphqlAPI, query);
 
   return result.categories;
+};
+
+export const getSolutions = async () => {
+  const query = gql`
+    query MyQuery {
+      solutions(orderBy: publishedAt_ASC) {
+        title
+        publishedAt
+        link
+        challengeLink
+        id
+        level
+      }
+    }
+  `;
+
+  const result = await request<Solutions>(graphqlAPI, query);
+  return result.solutions;
 };

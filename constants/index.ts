@@ -1,16 +1,13 @@
 import { RiGitRepositoryFill } from 'react-icons/ri';
-import {
-  BsFacebook,
-  BsFillHeartFill,
-  BsGithub,
-  BsLinkedin,
-} from 'react-icons/bs';
+import { AiFillMessage } from 'react-icons/ai';
+import { BsFillHeartFill, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { FaCoffee, FaFeatherAlt, FaUserAlt } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
 import { HiNewspaper, HiUser, HiCodeBracketSquare } from 'react-icons/hi2';
 
 export const NavLinks = [
   { href: '/', text: 'Posts', key: 'posts', icon: HiNewspaper },
-  { href: '/about', text: 'About', key: 'about', icon: HiUser },
+  { href: '/about', text: 'About', key: 'about', icon: AiFillMessage },
   {
     href: '/projects',
     text: 'Projects',
@@ -63,8 +60,8 @@ export const SocialLinks = [
     name: 'LinkedIn',
   },
   {
-    href: 'https://facebook.com/',
-    icon: BsFacebook,
+    href: 'mailto:hthant00chk@gmail.com',
+    icon: SiGmail,
     name: 'Facebook',
   },
 ];

@@ -10,8 +10,6 @@ module.exports = {
         'accent-color': '#b646fc',
         'accent-color-light': '#f6eff4',
         'light-gray': '#F6f6f6',
-        red: '#FF2633',
-        green: '#3FD93C',
       },
     },
   },

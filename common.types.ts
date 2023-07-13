@@ -1,14 +1,3 @@
-export interface PostMetaData {
-  title: string;
-  date: string;
-  cover?: string;
-  subtitle: string;
-  language: string;
-  externalLink?: string;
-  tags: string[];
-  slug: string;
-}
-
 export interface ProjectInterface {
   title: string;
   description: string;
@@ -38,4 +27,13 @@ export interface Post {
   externalLink?: string;
   categories: Category[];
   coverImage: CoverImage;
+}
+
+export interface Solution {
+  id: number;
+  title: string;
+  link: string;
+  challengeLink: string;
+  level: string;
+  publishedAt: string;
 }
