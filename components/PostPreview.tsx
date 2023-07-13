@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Post, PostMetaData } from '@/common.types';
+import { Post } from '@/common.types';
 import {
   RiCalendarEventLine,
   RiExternalLinkLine,

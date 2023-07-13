@@ -1,14 +1,8 @@
-import getPostMetaData from '@/utils/getPostMetaData';
 import PostPreview from '@/components/PostPreview';
 import { BsGrid1X2 } from 'react-icons/bs';
 import { getPosts } from '@/services';
-import { Post } from '@/common.types';
 
 export default async function Home() {
-  // const postMetaData = getPostMetaData();
-  // const postPreviews = postMetaData
-  //   .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
-  //   .map((post) => <PostPreview key={post.slug} {...post} />);
   const posts = await getPosts();
   const postPreviews = posts.map((post) => (
     <PostPreview key={post.slug} {...post} />
@@ -27,3 +21,5 @@ export default async function Home() {
     </section>
   );
 }
+
+export const revalidate = 10800;

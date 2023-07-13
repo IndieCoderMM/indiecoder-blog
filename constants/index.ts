@@ -4,7 +4,6 @@ import {
   BsFillHeartFill,
   BsGithub,
   BsLinkedin,
-  BsTwitter,
 } from 'react-icons/bs';
 import { FaCoffee, FaFeatherAlt, FaUserAlt } from 'react-icons/fa';
 import { HiNewspaper, HiUser, HiCodeBracketSquare } from 'react-icons/hi2';
@@ -67,11 +66,6 @@ export const SocialLinks = [
     href: 'https://facebook.com/',
     icon: BsFacebook,
     name: 'Facebook',
-  },
-  {
-    href: 'https://twitter.com/',
-    icon: BsTwitter,
-    name: 'Twitter',
   },
 ];
 
