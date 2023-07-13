@@ -1,5 +1,4 @@
 import Markdown from 'markdown-to-jsx';
-import getPostMetaData from '@/utils/getPostMetaData';
 import { BsCalendar3 } from 'react-icons/bs';
 import { getPostDetails, getPosts } from '@/services';
 import formatDate from '@/utils/formatDate';
