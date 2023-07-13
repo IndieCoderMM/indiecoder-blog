@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import './globals.css';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export const metadata = {
   title: 'IndieCoder Blog',
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body>
         {header}
         <main className="p-5 maxContentWidth">{children}</main>
+        <ScrollToTopButton />
         {footer}
       </body>
     </html>

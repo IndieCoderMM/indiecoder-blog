@@ -1,11 +1,11 @@
 import PostPreview from '@/components/PostPreview';
 import { BsGrid1X2 } from 'react-icons/bs';
 import { getPosts } from '@/services';
+import sortPostsByDate from '@/utils/sortPostsByDate';
 
 export default async function Home() {
   const posts = await getPosts();
-  // TODO sort by dates
-  // posts.sort((a,b) => (new Date(a.originalDate || a.publishedAt) - new Date(b.originalDate || b.publishedAt)))
+  sortPostsByDate(posts);
   const postPreviews = posts.map((post) => (
     <PostPreview key={post.slug} {...post} />
   ));

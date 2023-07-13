@@ -41,7 +41,7 @@ const PostPreview = (props: Post) => {
         <h3 className="text-slate-500">{props.excerpt}</h3>
         <ul className="flex gap-3 text-slate-500 flex-wrap">
           {props.categories?.map((category) => (
-            <li key={category.slug}>#{category.name}</li>
+            <li key={category.slug}>#{category.slug}</li>
           ))}
         </ul>
 
