@@ -1,6 +1,5 @@
 'use client';
 
-import { PiArrowFatLineUpBold } from 'react-icons/pi';
 import {
   Variants,
   motion,
@@ -8,6 +7,7 @@ import {
   useScroll,
 } from 'framer-motion';
 import { useEffect } from 'react';
+import { ArrowUpIcon } from '@heroicons/react/24/outline';
 
 const isBrowser = () => typeof window !== 'undefined';
 
@@ -36,13 +36,13 @@ const ScrollToTopButton = () => {
   });
   return (
     <motion.button
-      className="fixed bottom-5 right-3 z-50 bg-white text-slate-500 hover:bg-accent-color hover:text-white shadow-md rounded-full w-10 h-10 flex items-center justify-center"
+      className="fixed bottom-6 right-5 z-50 bg-white text-slate-500 hover:bg-accent-color hover:text-white shadow-lg rounded-full w-15 h-15 flex items-center justify-center"
       onClick={scrollToTop}
       variants={ScrollToTopContainerVariants}
       initial="hide"
       animate={controls}
     >
-      <PiArrowFatLineUpBold />
+      <ArrowUpIcon />
     </motion.button>
   );
 };

@@ -1,9 +1,8 @@
 import Markdown from 'markdown-to-jsx';
-import { BsCalendar3 } from 'react-icons/bs';
 import { getPostDetails, getPosts } from '@/services';
 import formatDate from '@/utils/formatDate';
-import { FaHashtag } from 'react-icons/fa';
 import Image from 'next/image';
+import { CalendarDaysIcon } from '@heroicons/react/24/outline';
 
 export const generateStaticParams = async () => {
   const posts = await getPosts();
@@ -20,7 +19,7 @@ const PostPage = async (props: any) => {
         <h2 className="text-3xl font-semibold text-center">{post.title}</h2>
         <div className="flex items-center p-3">
           <div className="flex items-center gap-1 text-slate-500">
-            <BsCalendar3 />
+            <CalendarDaysIcon />
             {formatDate(
               post.originalDate ? post.originalDate : post.publishedAt,
             )}

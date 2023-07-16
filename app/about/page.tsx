@@ -1,6 +1,7 @@
 import { AboutMe, SocialLinks } from '@/constants';
+import Image from 'next/image';
 import Link from 'next/link';
-import { BsFillChatDotsFill } from 'react-icons/bs';
+import { UserPlusIcon } from '@heroicons/react/24/outline';
 
 const AboutPage = () => {
   const iconStyle =
@@ -18,7 +19,7 @@ const AboutPage = () => {
         ))}
         <li className="flex gap-4">
           <div className={iconStyle + ' bg-accent-color'}>
-            <BsFillChatDotsFill className="text-white" />
+            <UserPlusIcon className="text-white" />
           </div>
           <div>
             <p className="text-l">
@@ -34,7 +35,7 @@ const AboutPage = () => {
                   className="hover:text-accent-color-light"
                 >
                   <span className="sr-only">{link.name}</span>
-                  <link.icon className=" text-slate-500" />
+                  <Image src={link.icon} alt="Icon" width={40} height={40} />
                 </Link>
               ))}
             </div>

@@ -1,24 +1,30 @@
-import { RiGitRepositoryFill } from 'react-icons/ri';
-import { AiFillMessage } from 'react-icons/ai';
-import { BsFillHeartFill, BsGithub, BsLinkedin } from 'react-icons/bs';
-import { FaCoffee, FaFeatherAlt, FaUserAlt } from 'react-icons/fa';
-import { SiGmail } from 'react-icons/si';
-import { HiNewspaper, HiUser, HiCodeBracketSquare } from 'react-icons/hi2';
+import {
+  HomeIcon,
+  ChatBubbleOvalLeftEllipsisIcon,
+  CodeBracketSquareIcon,
+  PuzzlePieceIcon,
+  InformationCircleIcon,
+} from '@heroicons/react/24/solid';
 
 export const NavLinks = [
-  { href: '/', text: 'Posts', key: 'posts', icon: HiNewspaper },
-  { href: '/about', text: 'About', key: 'about', icon: AiFillMessage },
+  { href: '/', text: 'Posts', key: 'posts', icon: HomeIcon },
+  {
+    href: '/about',
+    text: 'About',
+    key: 'about',
+    icon: ChatBubbleOvalLeftEllipsisIcon,
+  },
   {
     href: '/projects',
     text: 'Projects',
     key: 'projects',
-    icon: RiGitRepositoryFill,
+    icon: CodeBracketSquareIcon,
   },
   {
     href: '/solutions',
     text: 'Solutions',
     key: 'solutions',
-    icon: HiCodeBracketSquare,
+    icon: PuzzlePieceIcon,
   },
 ];
 
@@ -29,39 +35,39 @@ export const AboutMe = [
   {
     key: 'intro',
     text: "Hi there, 👋 I'm Hein Thant, a web developer from Myanmar",
-    icon: FaUserAlt,
+    icon: InformationCircleIcon,
   },
   {
     key: 'headline',
     text: 'Caffeinated coder and game-dev enthusiast',
-    icon: FaCoffee,
+    icon: InformationCircleIcon,
   },
   {
     key: 'blogging',
     text: 'Blogging about my experiences, to help others and to keep track of my own journey',
-    icon: FaFeatherAlt,
+    icon: InformationCircleIcon,
   },
   {
     key: 'opensource',
     text: 'Obsessed with open-source projects. Collaborating, innovating and building cool stuff together? Count me in! 😎',
-    icon: BsFillHeartFill,
+    icon: InformationCircleIcon,
   },
 ];
 
 export const SocialLinks = [
   {
     href: 'https://github.com/IndieCoderMM',
-    icon: BsGithub,
+    icon: '/icons/github.svg',
     name: 'GitHub',
   },
   {
     href: 'https://www.linkedin.com/in/hthantoo/',
-    icon: BsLinkedin,
+    icon: '/icons/linkedin.svg',
     name: 'LinkedIn',
   },
   {
     href: 'mailto:hthant00chk@gmail.com',
-    icon: SiGmail,
+    icon: '/icons/gmail.svg',
     name: 'Facebook',
   },
 ];

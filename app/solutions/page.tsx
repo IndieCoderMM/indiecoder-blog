@@ -1,9 +1,10 @@
 import SolutionCard from '@/components/SolutionCard';
+import { solutions } from '@/constants/sample';
 import { getSolutions } from '@/services';
 
 const SolutionsPage = async () => {
-  const solutions = await getSolutions();
-
+  // ! Enable before redeploy
+  // const solutions = await getSolutions();
   return (
     <section>
       <h2 className="text-lg mb-5">LeetCode Solutions</h2>
