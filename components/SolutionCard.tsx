@@ -1,8 +1,8 @@
 import { Solution } from '@/common.types';
 import {
-  Cog6ToothIcon,
   FireIcon,
   CheckBadgeIcon,
+  ShieldExclamationIcon,
 } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
@@ -15,25 +15,25 @@ interface CardStyle {
 }
 const CardStyle: CardStyle = {
   easy: {
-    text: 'text-green-500',
-    bg: 'bg-green-300',
+    text: 'text-green-400',
+    bg: 'bg-green-200',
     icon: CheckBadgeIcon,
   },
   medium: {
     text: 'text-yellow-400',
     bg: 'bg-yellow-200',
-    icon: Cog6ToothIcon,
+    icon: ShieldExclamationIcon,
   },
   hard: {
     text: 'text-red-400',
-    bg: 'bg-red-300',
+    bg: 'bg-red-200',
     icon: FireIcon,
   },
 };
 
 const SolutionCard = ({ solution }: { solution: Solution }) => {
   const buttonStyle =
-    'py-1 px-3 border border-accent-color text-accent-color rounded-md flex items-center';
+    'py-1 px-3 border text-accent-color rounded-md flex items-center hover:shadow';
   const level = solution.level.toLowerCase();
   const { text: textStyle, bg: bgStyle, icon: Icon } = CardStyle[level];
 
@@ -41,16 +41,20 @@ const SolutionCard = ({ solution }: { solution: Solution }) => {
     <div className={bgStyle + ' rounded-lg shadow overflow-hidden'}>
       <div className="h-12 overflow-hidden">
         <Icon
-          className={textStyle + ' w-14 h-14 transform rotate-12 float-right '}
+          className={
+            textStyle + ' w-14 h-14 transform rotate-[30deg] float-right '
+          }
         />
       </div>
       <div className="flex flex-col items-start gap-3 p-3 rounded-lg rounded-t-2xl bg-white">
-        <h3 className="font-medium text-slate-600">{solution.title}</h3>
-        <span
-          className={`${textStyle} ${bgStyle} text-xs px-3 py-1 rounded-full`}
-        >
-          {solution.level}
-        </span>
+        <header>
+          <h3 className="font-medium text-slate-600">{solution.title}</h3>
+          <span
+            className={`${textStyle} ${bgStyle} text-xs px-3 py-1 rounded-full`}
+          >
+            {solution.level}
+          </span>
+        </header>
         <div className="flex gap-1">
           <Link
             href={solution.challengeLink}
