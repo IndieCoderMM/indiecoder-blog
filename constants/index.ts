@@ -1,7 +1,6 @@
 import { GitHubIcon, LinkedInIcon, RepoForkedIcon } from '@/components/icons';
 import {
   CommandLineIcon,
-  UserIcon,
   HeartIcon,
   PencilIcon,
 } from '@heroicons/react/24/outline';
@@ -10,7 +9,6 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
   CodeBracketSquareIcon,
   PuzzlePieceIcon,
-  InformationCircleIcon,
   EnvelopeIcon,
 } from '@heroicons/react/24/solid';
 
@@ -47,7 +45,7 @@ export const AboutMe = [
   },
   {
     key: 'headline',
-    text: 'Caffeinated coder and game-dev enthusiast',
+    text: 'Caffeinated coder and passionate game developer',
     icon: CommandLineIcon,
   },
   {
@@ -57,7 +55,7 @@ export const AboutMe = [
   },
   {
     key: 'opensource',
-    text: 'Obsessed with open-source projects. Collaborating, innovating and building cool stuff together? Count me in! 😎',
+    text: 'Open-source enthusiast, collaborating and innovating with developers worldwide',
     icon: RepoForkedIcon,
   },
 ];

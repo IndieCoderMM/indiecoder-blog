@@ -1,4 +1,6 @@
 import { Solution } from '@/common.types';
+import formatDate from '@/utils/formatDate';
+import { ClockIcon } from '@heroicons/react/24/outline';
 import {
   FireIcon,
   CheckBadgeIcon,
@@ -47,13 +49,19 @@ const SolutionCard = ({ solution }: { solution: Solution }) => {
         />
       </div>
       <div className="flex flex-col items-start gap-3 p-3 rounded-lg rounded-t-2xl bg-white">
-        <header>
+        <header className="w-full">
           <h3 className="font-medium text-slate-600">{solution.title}</h3>
-          <span
-            className={`${textStyle} ${bgStyle} text-xs px-3 py-1 rounded-full`}
-          >
-            {solution.level}
-          </span>
+          <div className="flex justify-between">
+            <span
+              className={`${textStyle} ${bgStyle} text-xs px-3 py-1 rounded-full`}
+            >
+              {solution.level}
+            </span>
+            <div className="flex items-center text-slate-500">
+              <ClockIcon className="w-4 h-4" />
+              <span>{formatDate(solution.publishedAt)}</span>
+            </div>
+          </div>
         </header>
         <div className="flex gap-1">
           <Link

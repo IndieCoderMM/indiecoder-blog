@@ -15,10 +15,10 @@ export default async function Home() {
 
   return (
     <section>
-      <header className="flex items-center gap-3 mb-5  text-slate-400">
+      <header className="flex items-center pageHeading">
         <NewspaperIcon className="w-8 h-8" />
-        <h2 className="text-xl">
-          <span className="text-slate-700 mr-2">{posts.length}</span>
+        <h2>
+          <span className="mr-1">{posts.length}</span>
           Posts Total
         </h2>
       </header>

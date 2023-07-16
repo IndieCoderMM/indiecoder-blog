@@ -96,7 +96,7 @@ export const getCategories = async () => {
 export const getSolutions = async () => {
   const query = gql`
     query MyQuery {
-      solutions(orderBy: publishedAt_ASC) {
+      solutions(orderBy: publishedAt_DESC) {
         title
         publishedAt
         link

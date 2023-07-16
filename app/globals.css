@@ -38,6 +38,10 @@ body {
   @apply max-w-3xl mx-auto;
 }
 
+.pageHeading {
+  @apply text-slate-500 text-xl;
+}
+
 .expandLink::before {
   content: '';
   position: absolute;
