@@ -19,7 +19,7 @@ const PostPage = async (props: any) => {
         <h2 className="text-3xl font-semibold text-center">{post.title}</h2>
         <div className="flex items-center p-3">
           <div className="flex items-center gap-1 text-slate-500">
-            <CalendarDaysIcon />
+            <CalendarDaysIcon className="w-6 h-6" />
             {formatDate(
               post.originalDate ? post.originalDate : post.publishedAt,
             )}

@@ -1,9 +1,17 @@
+import { GitHubIcon, LinkedInIcon, RepoForkedIcon } from '@/components/icons';
+import {
+  CommandLineIcon,
+  UserIcon,
+  HeartIcon,
+  PencilIcon,
+} from '@heroicons/react/24/outline';
 import {
   HomeIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   CodeBracketSquareIcon,
   PuzzlePieceIcon,
   InformationCircleIcon,
+  EnvelopeIcon,
 } from '@heroicons/react/24/solid';
 
 export const NavLinks = [
@@ -35,40 +43,40 @@ export const AboutMe = [
   {
     key: 'intro',
     text: "Hi there, 👋 I'm Hein Thant, a web developer from Myanmar",
-    icon: InformationCircleIcon,
+    icon: HeartIcon,
   },
   {
     key: 'headline',
     text: 'Caffeinated coder and game-dev enthusiast',
-    icon: InformationCircleIcon,
+    icon: CommandLineIcon,
   },
   {
     key: 'blogging',
     text: 'Blogging about my experiences, to help others and to keep track of my own journey',
-    icon: InformationCircleIcon,
+    icon: PencilIcon,
   },
   {
     key: 'opensource',
     text: 'Obsessed with open-source projects. Collaborating, innovating and building cool stuff together? Count me in! 😎',
-    icon: InformationCircleIcon,
+    icon: RepoForkedIcon,
   },
 ];
 
 export const SocialLinks = [
   {
     href: 'https://github.com/IndieCoderMM',
-    icon: '/icons/github.svg',
+    icon: GitHubIcon,
     name: 'GitHub',
   },
   {
     href: 'https://www.linkedin.com/in/hthantoo/',
-    icon: '/icons/linkedin.svg',
+    icon: LinkedInIcon,
     name: 'LinkedIn',
   },
   {
     href: 'mailto:hthant00chk@gmail.com',
-    icon: '/icons/gmail.svg',
-    name: 'Facebook',
+    icon: EnvelopeIcon,
+    name: 'Gmail',
   },
 ];
 

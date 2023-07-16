@@ -1,32 +1,53 @@
 import { Solution } from '@/common.types';
-import { FireIcon } from '@heroicons/react/24/solid';
+import {
+  Cog6ToothIcon,
+  FireIcon,
+  CheckBadgeIcon,
+} from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
-interface LevelStyles {
-  [key: string]: string;
+interface CardStyle {
+  [key: string]: {
+    text: string;
+    bg: string;
+    icon: any;
+  };
 }
+const CardStyle: CardStyle = {
+  easy: {
+    text: 'text-green-500',
+    bg: 'bg-green-300',
+    icon: CheckBadgeIcon,
+  },
+  medium: {
+    text: 'text-yellow-400',
+    bg: 'bg-yellow-200',
+    icon: Cog6ToothIcon,
+  },
+  hard: {
+    text: 'text-red-400',
+    bg: 'bg-red-300',
+    icon: FireIcon,
+  },
+};
 
 const SolutionCard = ({ solution }: { solution: Solution }) => {
-  const tagStyle: LevelStyles = {
-    easy: 'text-green bg-green-200',
-    medium: 'text-yellow-600 bg-yellow-200',
-    hard: 'text-red bg-red-200',
-  };
-
   const buttonStyle =
     'py-1 px-3 border border-accent-color text-accent-color rounded-md flex items-center';
+  const level = solution.level.toLowerCase();
+  const { text: textStyle, bg: bgStyle, icon: Icon } = CardStyle[level];
 
   return (
-    <div className=" bg-green-400 rounded-lg">
-      <div className="h-20">
-        <FireIcon className="text-3xl transform rotate-45" />
+    <div className={bgStyle + ' rounded-lg shadow overflow-hidden'}>
+      <div className="h-12 overflow-hidden">
+        <Icon
+          className={textStyle + ' w-14 h-14 transform rotate-12 float-right '}
+        />
       </div>
-      <div className="flex flex-col items-start gap-3 p-3 rounded-lg bg-white">
+      <div className="flex flex-col items-start gap-3 p-3 rounded-lg rounded-t-2xl bg-white">
         <h3 className="font-medium text-slate-600">{solution.title}</h3>
         <span
-          className={
-            tagStyle[solution.level] + ' text-xs px-3 py-1 rounded-full'
-          }
+          className={`${textStyle} ${bgStyle} text-xs px-3 py-1 rounded-full`}
         >
           {solution.level}
         </span>

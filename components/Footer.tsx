@@ -6,26 +6,23 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="text-center text-slate-400 border-t border-slate-300 mt-6 py-6">
-        <h2>&copy; 2023 www.indiecoder.tech</h2>
-        <h3>Developed by IndieCoderMM</h3>
-        <ul className="flex items-center justify-center flex-wrap gap-5 p-3">
+    <footer className="bg-slate-800 mt-6 py-6 text-white text-center">
+      <div className="">
+        <h2 className="font-medium text-lg">Connect with Me</h2>
+        <ul className="flex items-center justify-center gap-5 p-3">
           {SocialLinks.map((link) => (
-            <li className="text-3xl" key={link.name}>
+            <li className="hover:underline" key={link.name}>
               <Link href={link.href}>
-                <span className="sr-only">{link.name}</span>
-                <Image
-                  src={link.icon}
-                  alt="Icon"
-                  width={40}
-                  height={40}
-                  className="text-slate-500"
-                />
+                <span>{link.name}</span>
               </Link>
             </li>
           ))}
         </ul>
+        <hr className="w-[95%] mx-auto border-slate-200" />
+      </div>
+      <div className="mt-3 grid gap-1 text-slate-400">
+        <h2>&copy; 2023 www.indiecoder.tech</h2>
+        <h3>Developed by IndieCoderMM</h3>
       </div>
     </footer>
   );

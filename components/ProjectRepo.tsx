@@ -1,5 +1,5 @@
 import { CodeIcon, RepoIcon } from './icons';
-import { StarIcon } from '@heroicons/react/24/solid';
+import { StarIcon, CodeBracketIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { ProjectInterface } from '@/common.types';
 
@@ -7,7 +7,7 @@ const ProjectRepo = (props: ProjectInterface) => {
   return (
     <div className="flex flex-col relative h-full border border-slate-300 rounded-md p-5 gap-3 hover:shadow">
       <header className="flex items-center flex-wrap gap-1 text-slate-500">
-        <RepoIcon className="text-xl" />
+        <RepoIcon className="w-6 h-6 text-slate-400 fill-current" />
         <Link
           href={props.link}
           target="_blank"
@@ -22,13 +22,13 @@ const ProjectRepo = (props: ProjectInterface) => {
       <blockquote className="text-sm text-slate-500">
         <p>{props.description}</p>
       </blockquote>
-      <div className="flex gap-5 text-sm text-slate-500 mt-auto">
+      <div className="flex items-center justify-between text-sm text-slate-500 mt-auto">
         <div className="flex items-center gap-1">
-          <CodeIcon />
+          <CodeIcon className="w-5 h-5 fill-current stroke-none" />
           <span>{props.language}</span>
         </div>
-        <div className="flex items-center gap-1">
-          <StarIcon className="w-6 h-6 text-yellow-400" />
+        <div className="flex items-start gap-1">
+          <StarIcon className="w-5 h-5 text-yellow-400" />
           <span>{props.star}</span>
         </div>
       </div>
