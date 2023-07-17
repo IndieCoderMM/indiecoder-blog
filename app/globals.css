@@ -39,7 +39,7 @@ body {
 }
 
 .pageHeading {
-  @apply text-slate-500 text-xl;
+  @apply text-slate-500 text-xl font-semibold;
 }
 
 .expandLink::before {

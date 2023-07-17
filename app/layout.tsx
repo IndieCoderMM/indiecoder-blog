@@ -5,7 +5,8 @@ import Header from '@/components/Header';
 
 export const metadata = {
   title: 'IndieCoder Blog',
-  description: 'Programming Blog Page',
+  description:
+    'Welcome to my blog, where I share my experiences, insights and lessons learned on my coding journey.',
 };
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="p-5 maxContentWidth">{children}</main>
+        <main className="p-5 mt-8 maxContentWidth">{children}</main>
         <ScrollToTopButton />
         <Footer />
       </body>
