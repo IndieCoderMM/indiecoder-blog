@@ -6,8 +6,8 @@ import { NewspaperIcon } from '@heroicons/react/24/outline';
 export default async function Home() {
   const posts = await getPosts();
 
-  sortPostsByDate(posts);
-  const postPreviews = posts.map((post) => (
+  const orderedPosts = sortPostsByDate(posts);
+  const postPreviews = orderedPosts.map((post) => (
     <PostPreview key={post.slug} {...post} />
   ));
 

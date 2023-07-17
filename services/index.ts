@@ -1,4 +1,4 @@
-import { Category, Post, Solution } from '@/common.types';
+import { Category, Post, Project, Solution } from '@/common.types';
 import { request, gql } from 'graphql-request';
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT!;
@@ -17,6 +17,14 @@ interface Categories {
 
 interface Solutions {
   solutions: Solution[];
+}
+
+interface Projects {
+  projectsConnection: {
+    edges: {
+      node: Project;
+    }[];
+  };
 }
 
 export const getPosts = async () => {
@@ -95,7 +103,7 @@ export const getCategories = async () => {
 
 export const getSolutions = async () => {
   const query = gql`
-    query MyQuery {
+    query GetSolutions {
       solutions(orderBy: publishedAt_DESC) {
         title
         publishedAt
@@ -109,4 +117,30 @@ export const getSolutions = async () => {
 
   const result = await request<Solutions>(graphqlAPI, query);
   return result.solutions;
+};
+
+export const getProjects = async () => {
+  const query = gql`
+    query GetProjects {
+      projectsConnection(orderBy: createdAt_DESC) {
+        edges {
+          node {
+            category {
+              slug
+              name
+            }
+            description
+            id
+            language
+            publishedAt
+            repoLink
+            starCount
+            title
+          }
+        }
+      }
+    }
+  `;
+  const result = await request<Projects>(graphqlAPI, query);
+  return result.projectsConnection.edges.map((e) => e.node);
 };

@@ -57,7 +57,7 @@ const SolutionCard = ({ solution }: { solution: Solution }) => {
             >
               {solution.level}
             </span>
-            <div className="flex items-center text-slate-500">
+            <div className="flex items-center text-slate-500 text-xs">
               <ClockIcon className="w-4 h-4" />
               <span>{formatDate(solution.publishedAt)}</span>
             </div>

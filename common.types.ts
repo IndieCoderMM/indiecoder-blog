@@ -1,12 +1,3 @@
-export interface ProjectInterface {
-  title: string;
-  description: string;
-  language: string;
-  link: string;
-  category: string;
-  star: number;
-}
-
 export interface Category {
   name: string;
   slug: string;
@@ -27,6 +18,16 @@ export interface Post {
   externalLink?: string;
   categories: Category[];
   coverImage: CoverImage;
+}
+
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  language: string;
+  repoLink: string;
+  category: Category;
+  starCount: number;
 }
 
 export interface Solution {

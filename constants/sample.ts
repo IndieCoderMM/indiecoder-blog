@@ -1,4 +1,4 @@
-import { Category, CoverImage, Post, Solution } from '@/common.types';
+import { Category, CoverImage, Post, Project, Solution } from '@/common.types';
 
 export const categories: Category[] = [
   {
@@ -107,5 +107,37 @@ export const solutions: Solution[] = [
       'https://leetcode.com/explore/interview/card/top-interview-questions-medium/111/dynamic-programming/810/',
     level: 'Hard',
     publishedAt: '2022-07-30',
+  },
+];
+
+export const TutoProjects: Project[] = [
+  {
+    id: 1,
+    title: 'pokeverse',
+    description:
+      'SPA created to demonstrate the usage of Redux Toolkit in React app',
+    repoLink: 'https://github.com/IndieCoderMM/pokeverse',
+    starCount: 3,
+    language: 'Javascript',
+    category: categories[0],
+  },
+  {
+    id: 2,
+    title: 'tictactoe-ai',
+    description:
+      'Unbeatable Tic-tac-toe A.I. can calculate the best moves using Minimax algorithm. Built in Python using Pygame library',
+    repoLink: 'https://github.com/IndieCoderMM/tictactoe-ai',
+    starCount: 5,
+    language: 'Python',
+    category: categories[0],
+  },
+  {
+    id: 3,
+    title: 'snake-game',
+    description: 'Classic Snake Game in Pygame',
+    repoLink: 'https://github.com/IndieCoderMM/snake-game',
+    starCount: 0,
+    language: 'Python',
+    category: categories[0],
   },
 ];
