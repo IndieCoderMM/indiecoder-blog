@@ -30,14 +30,17 @@ interface Projects {
 export const getPosts = async () => {
   const query = gql`
     query GetPosts {
-      postsConnection {
+      postsConnection(orderBy: originalDate_DESC) {
         edges {
           node {
-            publishedAt
-            slug
+            id
             title
             excerpt
+            slug
             content
+            externalLink
+            language
+            originalDate
             categories {
               name
               slug
@@ -45,9 +48,6 @@ export const getPosts = async () => {
             coverImage {
               url
             }
-            externalLink
-            language
-            originalDate
           }
         }
       }
@@ -63,12 +63,12 @@ export const getPostDetails = async (slug: string) => {
   const query = gql`
     query GetPostDetails($slug: String!) {
       post(where: { slug: $slug }) {
-        publishedAt
-        originalDate
-        slug
+        id
         title
         excerpt
         content
+        slug
+        originalDate
         language
         categories {
           name

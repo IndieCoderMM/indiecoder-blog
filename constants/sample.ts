@@ -29,34 +29,37 @@ export const coverImages: CoverImage[] = [
 
 export const posts: Post[] = [
   {
+    id: 0,
+    originalDate: '2023-7-18',
     title: 'Getting Started with React',
     slug: 'getting-started-with-react',
     excerpt: 'Learn the basics of React and start building web applications.',
     content: 'This is the full content of the post...',
     language: 'English',
-    publishedAt: '2022-01-10',
     categories: [categories[0]],
     coverImage: coverImages[0],
   },
   {
+    id: 0,
+    originalDate: '2023-7-18',
     title: 'Introduction to Machine Learning',
     slug: 'introduction-to-machine-learning',
     excerpt:
       'Discover the fundamentals of machine learning and its applications.',
     content: 'This is the full content of the post...',
     language: 'English',
-    publishedAt: '2022-02-15',
     categories: [categories[1]],
     coverImage: coverImages[1],
   },
   {
+    id: 0,
+    originalDate: '2023-7-18',
     title: 'Building a Mobile App with React Native',
     slug: 'building-a-mobile-app-with-react-native',
     excerpt:
       'Learn how to create cross-platform mobile apps using React Native.',
     content: 'This is the full content of the post...',
     language: 'English',
-    publishedAt: '2022-03-20',
     categories: [categories[2]],
     coverImage: coverImages[2],
   },

@@ -1,14 +1,12 @@
 import PostPreview from '@/components/PostPreview';
 import { getPosts } from '@/services';
-import sortPostsByDate from '@/utils/sortPostsByDate';
 import { NewspaperIcon } from '@heroicons/react/24/outline';
 
 export default async function Home() {
   const posts = await getPosts();
 
-  const orderedPosts = sortPostsByDate(posts);
-  const postPreviews = orderedPosts.map((post) => (
-    <PostPreview key={post.slug} {...post} />
+  const postPreviews = posts.map((post) => (
+    <PostPreview key={post.id} {...post} />
   ));
 
   return (

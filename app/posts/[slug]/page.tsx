@@ -2,7 +2,8 @@ import Markdown from 'markdown-to-jsx';
 import { getPostDetails, getPosts } from '@/services';
 import formatDate from '@/utils/formatDate';
 import Image from 'next/image';
-import { CalendarDaysIcon } from '@heroicons/react/24/outline';
+import { BookOpenIcon, CalendarDaysIcon } from '@heroicons/react/24/outline';
+import calculateReadingTime from '@/utils/calculateReadingTime';
 
 export const generateStaticParams = async () => {
   const posts = await getPosts();
@@ -17,12 +18,17 @@ const PostPage = async (props: any) => {
     <article>
       <header className="border-b border-slate-400 mb-5">
         <h2 className="text-3xl font-semibold text-center">{post.title}</h2>
-        <div className="flex items-center p-3">
+        <div className="flexBetween p-3">
           <div className="flex items-center gap-1 text-slate-500">
             <CalendarDaysIcon className="w-6 h-6" />
-            {formatDate(
-              post.originalDate ? post.originalDate : post.publishedAt,
-            )}
+            <span>Published At: </span>
+            {formatDate(post.originalDate)}
+          </div>
+          <div className="flex items-center gap-1 text-slate-500">
+            <BookOpenIcon className="w-6 h-6" />
+            <span>Reading Time: </span>
+            {calculateReadingTime(post.content)}
+            <span>&nbsp;minutes</span>
           </div>
         </div>
       </header>

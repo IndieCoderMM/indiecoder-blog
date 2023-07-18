@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="p-5 mt-8 maxContentWidth">{children}</main>
+        <main className="p-5 mt-10 maxContentWidth">{children}</main>
         <ScrollToTopButton />
         <Footer />
       </body>

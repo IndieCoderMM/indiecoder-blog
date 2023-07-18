@@ -6,7 +6,9 @@ import {
   CalendarDaysIcon,
   ArrowTopRightOnSquareIcon,
   LanguageIcon,
+  BookOpenIcon,
 } from '@heroicons/react/24/outline';
+import calculateReadingTime from '@/utils/calculateReadingTime';
 
 const PostPreview = (props: Post) => {
   const iconStyle = 'w-6 h-6';
@@ -51,19 +53,22 @@ const PostPreview = (props: Post) => {
           ))}
         </ul>
 
-        <div className="flexBetween text-gray-400 text-sm mt-auto">
+        <div className="relative flexBetween text-gray-400 text-sm mt-3">
           <div className="flexCenter gap-1">
             <CalendarDaysIcon className={iconStyle} />
-            <time
-              dateTime={
-                props.originalDate ? props.originalDate : props.publishedAt
-              }
-            >
-              {formatDate(
-                props.originalDate ? props.originalDate : props.publishedAt,
-              )}
+            <time dateTime={props.originalDate}>
+              {formatDate(props.originalDate)}
             </time>
           </div>
+          {!props.externalLink && (
+            <div className="absolute w-full flexCenter gap-1 bg-transparent">
+              <BookOpenIcon className={iconStyle} />
+              <p>
+                {calculateReadingTime(props.content)}
+                <span>&nbsp;minutes</span>
+              </p>
+            </div>
+          )}
           <div className="flexCenter gap-1">
             <LanguageIcon className={iconStyle} />
             <p>{props.language}</p>

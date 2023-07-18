@@ -19,7 +19,7 @@ const ProjectRepo = (props: Project) => {
           {props.category.slug}
         </span>
       </header>
-      <blockquote className="text-sm text-slate-500">
+      <blockquote className="text-xs text-slate-500">
         <p>{props.description}</p>
       </blockquote>
       <div className="flex items-center justify-between text-sm text-slate-500 mt-auto">
