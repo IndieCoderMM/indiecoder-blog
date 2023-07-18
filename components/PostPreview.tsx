@@ -55,22 +55,25 @@ const PostPreview = (props: Post) => {
 
         <div className="relative flexBetween text-gray-400 text-sm mt-3">
           <div className="flexCenter gap-1">
-            <CalendarDaysIcon className={iconStyle} />
+            <CalendarDaysIcon
+              className={iconStyle}
+              aria-label="published date"
+            />
             <time dateTime={props.originalDate}>
               {formatDate(props.originalDate)}
             </time>
           </div>
           {!props.externalLink && (
-            <div className="absolute w-full flexCenter gap-1 bg-transparent">
-              <BookOpenIcon className={iconStyle} />
+            <div className="flexCenter gap-1">
+              <BookOpenIcon className={iconStyle} aria-label="reading time" />
               <p>
                 {calculateReadingTime(props.content)}
-                <span>&nbsp;minutes</span>
+                <span>&nbsp;min read</span>
               </p>
             </div>
           )}
           <div className="flexCenter gap-1">
-            <LanguageIcon className={iconStyle} />
+            <LanguageIcon className={iconStyle} aria-label="written language" />
             <p>{props.language}</p>
           </div>
         </div>

@@ -17,16 +17,16 @@ const PostPage = async (props: any) => {
   return (
     <article>
       <header className="border-b border-slate-400 mb-5">
-        <h2 className="text-3xl font-semibold text-center">{post.title}</h2>
-        <div className="flexBetween p-3">
+        <h1 className="text-3xl font-bold text-center">{post.title}</h1>
+        <div className="flexBetween flex-wrap p-3">
           <div className="flex items-center gap-1 text-slate-500">
             <CalendarDaysIcon className="w-6 h-6" />
-            <span>Published At: </span>
+            <span className="sr-only">Published At: </span>
             {formatDate(post.originalDate)}
           </div>
           <div className="flex items-center gap-1 text-slate-500">
             <BookOpenIcon className="w-6 h-6" />
-            <span>Reading Time: </span>
+            <span className="sr-only">Reading Time: </span>
             {calculateReadingTime(post.content)}
             <span>&nbsp;minutes</span>
           </div>

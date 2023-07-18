@@ -50,7 +50,7 @@ const SolutionCard = ({ solution }: { solution: Solution }) => {
       </div>
       <div className="flex flex-col items-start gap-3 p-3 rounded-lg rounded-t-2xl bg-white">
         <header className="w-full">
-          <h3 className="font-medium text-slate-600">{solution.title}</h3>
+          <h2 className="font-medium text-slate-600">{solution.title}</h2>
           <div className="flex justify-between">
             <span
               className={`${textStyle} ${bgStyle} text-xs px-3 py-1 rounded-full`}

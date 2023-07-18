@@ -13,10 +13,10 @@ export default async function Home() {
     <section>
       <header className="flex items-center pageHeading mb-5">
         <NewspaperIcon className="w-8 h-8" />
-        <h2>
+        <h1>
           <span className="mr-1">{posts.length}</span>
           Posts Total
-        </h2>
+        </h1>
       </header>
       <div className="grid gap-4 w-full max-w-xl mx-auto">{postPreviews}</div>
     </section>
