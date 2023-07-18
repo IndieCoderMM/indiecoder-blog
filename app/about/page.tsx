@@ -1,6 +1,7 @@
 import { AboutMe, SocialLinks } from '@/constants';
 import Link from 'next/link';
-import { UserPlusIcon } from '@heroicons/react/24/outline';
+import { InboxArrowDownIcon, UserPlusIcon } from '@heroicons/react/24/outline';
+import ContactForm from '@/components/ContactForm';
 
 const AboutPage = () => {
   const iconStyle =
@@ -18,15 +19,15 @@ const AboutPage = () => {
           </li>
         ))}
         <li className="flex gap-4">
-          <div className={iconStyle + ' bg-accent-color'}>
-            <UserPlusIcon className="w-7 h-7 text-white" />
+          <div className={iconStyle + ' bg-accent-color-light'}>
+            <UserPlusIcon className="w-7 h-7 text-accent-color" />
           </div>
           <div>
-            <p className="text-l">
+            <p>
               Feel free to connect with me. I&apos;d love to exchange ideas and
               learn from each other!
             </p>
-            <div className="flex items-center justify-center shadow-inner gap-10 py-5 px-2 text-3xl border rounded-lg mt-3">
+            <div className="flex items-center justify-center shadow-inner md:gap-10 p-3 text-3xl border rounded-lg mt-3">
               {SocialLinks.map((link) => (
                 <Link
                   href={link.href}
@@ -35,10 +36,22 @@ const AboutPage = () => {
                   className="transition duration-100 hover:scale-110"
                 >
                   <span className="sr-only">{link.name}</span>
-                  <link.icon className="w-10 h-10 fill-accent-color stroke-none" />
+                  <link.icon className="w-10 h-10 fill-accent-color stroke-none hover:fill-indigo-400" />
                 </Link>
               ))}
             </div>
+          </div>
+        </li>
+        <li className="flex gap-4 ">
+          <div className={iconStyle + ' bg-indigo-400'}>
+            <InboxArrowDownIcon className="w-7 h-7 text-white" />
+          </div>
+          <div className="flex-1">
+            <p>
+              You can message directly to my inbox with the form below. Let's
+              chat!
+            </p>
+            <ContactForm />
           </div>
         </li>
       </ul>
