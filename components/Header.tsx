@@ -1,10 +1,12 @@
 import React from 'react';
 import Navbar from './Navbar';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-20 flex justify-center w-full bg-white border-b border-slate-200 px-2 py-1">
-      <Navbar />
+    <header className="flexBetween w-full bg-white dark:bg-dark-gray p-2 maxContentWidth">
+      <h1 className="font-bold text-xl">IndieCoder Blog</h1>
+      <ThemeToggle />
     </header>
   );
 };

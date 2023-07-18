@@ -20,14 +20,14 @@ const PostPage = async (props: any) => {
     <>
       <article>
         <header className="border-b border-slate-400 mb-5">
-          <h1 className="text-3xl font-bold text-center">{post.title}</h1>
-          <div className="flexBetween flex-wrap p-3">
-            <div className="flex items-center gap-1 text-slate-500">
+          <h2 className="text-3xl font-bold text-center">{post.title}</h2>
+          <div className="flexBetween flex-wrap p-3 text-slate-500 dark:text-light-gray">
+            <div className="flex items-center gap-1">
               <CalendarDaysIcon className="w-6 h-6" />
               <span className="sr-only">Published At: </span>
               {formatDate(post.originalDate)}
             </div>
-            <div className="flex items-center gap-1 text-slate-500">
+            <div className="flex items-center gap-1">
               <BookOpenIcon className="w-6 h-6" />
               <span className="sr-only">Reading Time: </span>
               {calculateReadingTime(post.content)}
@@ -48,7 +48,7 @@ const PostPage = async (props: any) => {
         <ul className="flex items-center flex-wrap gap-3 my-3">
           {post.categories.map((category) => (
             <li
-              className="flex px-3 py-1 rounded-full text-xs bg-accent-color-light"
+              className="flex px-3 py-1 rounded-full text-xs bg-accent-color-light dark:bg-transparent darkBorder"
               key={category.slug}
             >
               <span className="text-bold">#</span>
@@ -56,7 +56,7 @@ const PostPage = async (props: any) => {
             </li>
           ))}
         </ul>
-        <section className="prose lg:prose-xl mx-auto p-2">
+        <section className="prose lg:prose-xl mx-auto p-2 dark:prose-invert">
           <Markdown>{post.content}</Markdown>
         </section>
       </article>

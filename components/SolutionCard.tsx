@@ -35,12 +35,17 @@ const CardStyle: CardStyle = {
 
 const SolutionCard = ({ solution }: { solution: Solution }) => {
   const buttonStyle =
-    'py-1 px-3 border text-accent-color rounded-md flex items-center hover:shadow';
+    'py-1 px-3 border text-accent-color rounded-md flexCenter hover:shadow dark:bg-light-brown';
   const level = solution.level.toLowerCase();
   const { text: textStyle, bg: bgStyle, icon: Icon } = CardStyle[level];
 
   return (
-    <div className={bgStyle + ' rounded-lg shadow overflow-hidden'}>
+    <div
+      className={
+        bgStyle +
+        ' rounded-lg shadow overflow-hidden dark:border border-slate-500'
+      }
+    >
       <div className="h-12 overflow-hidden">
         <Icon
           className={
@@ -48,16 +53,16 @@ const SolutionCard = ({ solution }: { solution: Solution }) => {
           }
         />
       </div>
-      <div className="flex flex-col items-start gap-3 p-3 rounded-lg rounded-t-2xl bg-white">
+      <div className="flex flex-col items-start gap-3 p-3 rounded-t-2xl bg-white dark:bg-dark-gray">
         <header className="w-full">
-          <h2 className="font-medium text-slate-600">{solution.title}</h2>
+          <h3 className="font-medium">{solution.title}</h3>
           <div className="flex justify-between">
             <span
               className={`${textStyle} ${bgStyle} text-xs px-3 py-1 rounded-full`}
             >
               {solution.level}
             </span>
-            <div className="flex items-center text-slate-500 text-xs">
+            <div className="flex items-center text-xs">
               <ClockIcon className="w-4 h-4" />
               <span>{formatDate(solution.publishedAt)}</span>
             </div>

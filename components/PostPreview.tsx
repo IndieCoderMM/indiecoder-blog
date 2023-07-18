@@ -13,7 +13,7 @@ import calculateReadingTime from '@/utils/calculateReadingTime';
 const PostPreview = (props: Post) => {
   const iconStyle = 'w-6 h-6';
   return (
-    <div className="relative shadow rounded-sm h-full transition-all duration-75 ease-in hover:shadow-lg border border-slate-100 overflow-hidden">
+    <div className="relative shadow rounded-sm h-full transition-all duration-75 ease-in dark:bg-light-brown hover:shadow-lg border border-slate-100 dark:border-gray-400  overflow-hidden">
       {props.coverImage && (
         <div className="p-1">
           <Image
@@ -28,7 +28,7 @@ const PostPreview = (props: Post) => {
       )}
       <section className="grid gap-2 p-3  lg:px-5">
         <header className="font-medium text-lg text-accent-color hover:underline expandLink">
-          <h2>
+          <h3>
             <Link
               href={
                 props.externalLink ? props.externalLink : `posts/${props.slug}`
@@ -39,14 +39,14 @@ const PostPreview = (props: Post) => {
               {props.title}
             </Link>
             {props.externalLink && (
-              <span className="absolute top-0 right-0 bg-white p-1 rounded-lg">
+              <span className="absolute top-0 right-0 bg-white dark:bg-light-brown p-1 rounded-bl-lg">
                 <ArrowTopRightOnSquareIcon className="w-7 h-7" />
               </span>
             )}
-          </h2>
+          </h3>
         </header>
 
-        <h3 className="text-slate-500">{props.excerpt}</h3>
+        <p className="text-slate-500">{props.excerpt}</p>
         <ul className="flex gap-3 text-sm text-slate-500 flex-wrap">
           {props.categories?.map((category) => (
             <li key={category.slug}>#{category.slug}</li>

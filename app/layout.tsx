@@ -2,6 +2,8 @@ import './globals.css';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import Providers from '@/components/Providers';
+import Navbar from '@/components/Navbar';
 
 export const metadata = {
   title: 'IndieCoder Blog',
@@ -17,10 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main className="p-5 mt-10 maxContentWidth">{children}</main>
-        <ScrollToTopButton />
-        <Footer />
+        <Providers>
+          <Header />
+          <Navbar />
+          <main className="p-5 maxContentWidth">{children}</main>
+          <ScrollToTopButton />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

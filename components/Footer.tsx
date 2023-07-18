@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-800 mt-6 py-6 text-white text-center">
+    <footer className="bg-dark-gray mt-8 py-6 text-light-gray text-center dark:border">
       <div className="">
         <h2 className="font-medium text-lg">Connect with Me</h2>
         <ul className="flex items-center justify-center gap-5 p-3">

@@ -13,7 +13,7 @@ const ContactForm = () => {
           <strong>Message Sent! 💌</strong>
           <p className="text-xs">
             Thanks for reaching out to me! 😃 Your message has made its way to
-            my inbox, and I can't wait to read it.
+            my inbox, and I can&apos;t wait to read it.
           </p>
         </p>
       )}

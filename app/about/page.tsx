@@ -5,11 +5,11 @@ import ContactForm from '@/components/ContactForm';
 
 const AboutPage = () => {
   const iconStyle =
-    'rounded-full w-12 h-12 ml-[-3.5rem] text-xl  ring-4 ring-white flex flex-shrink-0 items-center justify-center';
+    'rounded-full w-12 h-12 ml-[-3.5rem] text-xl ring-4 ring-white dark:bg-light-brown dark:ring-dark-gray darkBorder flexCenter flex-shrink-0';
   return (
     <section>
-      <h1 className="pageHeading">About Me</h1>
-      <ul className="border-l-2 pl-8 pt-8 pr-1 flex flex-col gap-5 w-[85%] max-w-3xl mx-auto">
+      <h2 className="pageHeading">About Me</h2>
+      <ul className="border-l-2 dark:border-accent-color pl-8 pt-8 pr-1 flex flex-col gap-5 w-[85%] max-w-3xl mx-auto">
         {AboutMe.map((data) => (
           <li className="flex items-center gap-4" key={data.key}>
             <div className={iconStyle + ' bg-accent-color-light'}>
@@ -30,7 +30,7 @@ const AboutPage = () => {
                 together! 🚀
               </p>
             </p>
-            <div className="flex items-center justify-center shadow-inner gap-5 md:gap-10 p-3 text-3xl border rounded-lg mt-3">
+            <div className="flexCenter shadow-inner dark:bg-light-brown gap-5 md:gap-10 p-3 text-3xl border rounded-lg mt-3">
               {SocialLinks.map((link) => (
                 <Link
                   href={link.href}
@@ -46,7 +46,12 @@ const AboutPage = () => {
           </div>
         </li>
         <li className="flex gap-4 ">
-          <div className={iconStyle + ' bg-indigo-400'}>
+          <div
+            className={
+              iconStyle +
+              ' bg-indigo-400 dark:bg-indigo-500 dark:border-indigo-500'
+            }
+          >
             <InboxArrowDownIcon className="w-7 h-7 text-white" />
           </div>
           <div className="flex-1">

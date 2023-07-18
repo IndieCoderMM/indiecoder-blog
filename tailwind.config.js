@@ -13,8 +13,11 @@ module.exports = {
         'vibrant-red': '#e85e71',
         'golden-yellow': '#e9d867',
         'fresh-green': '#39df20',
+        'dark-gray': '#181611',
+        'light-brown': '#1e1b15',
       },
     },
   },
   plugins: [require('@tailwindcss/typography')],
+  darkMode: 'class',
 };
