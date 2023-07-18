@@ -22,12 +22,15 @@ const AboutPage = () => {
           <div className={iconStyle + ' bg-accent-color-light'}>
             <UserPlusIcon className="w-7 h-7 text-accent-color" />
           </div>
-          <div>
+          <div className="flex-1">
             <p>
-              Feel free to connect with me. I&apos;d love to exchange ideas and
-              learn from each other!
+              Feel free to connect with me.
+              <p className="text-sm text-slate-500">
+                &nbsp;Let&apos;s code, collaborate and build awesome things
+                together! 🚀
+              </p>
             </p>
-            <div className="flex items-center justify-center shadow-inner md:gap-10 p-3 text-3xl border rounded-lg mt-3">
+            <div className="flex items-center justify-center shadow-inner gap-5 md:gap-10 p-3 text-3xl border rounded-lg mt-3">
               {SocialLinks.map((link) => (
                 <Link
                   href={link.href}
@@ -47,9 +50,10 @@ const AboutPage = () => {
             <InboxArrowDownIcon className="w-7 h-7 text-white" />
           </div>
           <div className="flex-1">
-            <p>
-              You can message directly to my inbox with the form below. Let's
-              chat!
+            <p>You can send a message directly to my inbox here.</p>
+            <p className="text-sm text-slate-500">
+              Whether you have thoughts about my blogs, projects, or just want
+              to say hi, I&apos;d love to hear from you! 😊
             </p>
             <ContactForm />
           </div>

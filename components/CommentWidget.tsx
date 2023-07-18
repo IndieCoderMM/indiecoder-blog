@@ -3,8 +3,8 @@
 import Giscus from '@giscus/react';
 
 const REPO_NAME = 'IndieCoderMM/indiecoder-blog';
-const REPO_ID = process.env.NEXT_PUBLIC_REPO_ID || '';
-const CATEGORY_ID = process.env.NEXT_PUBLIC_CATEGORY_ID || '';
+const REPO_ID = process.env.NEXT_PUBLIC_REPO_ID || 'Repoid';
+const CATEGORY_ID = process.env.NEXT_PUBLIC_CATEGORY_ID || 'CategoryId';
 
 export default function CommentWidget() {
   return (

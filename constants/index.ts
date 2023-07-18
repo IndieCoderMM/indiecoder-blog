@@ -45,17 +45,17 @@ export const AboutMe = [
   },
   {
     key: 'headline',
-    text: 'Caffeinated coder and passionate game developer',
+    text: 'Passionate about code, addicted to coffee ☕',
     icon: CommandLineIcon,
   },
   {
     key: 'blogging',
-    text: 'Blogging about my experiences, to help others and to keep track of my own journey',
+    text: 'Blogging about my experiences ✍ to help others and to keep track of my own journey',
     icon: PencilIcon,
   },
   {
     key: 'opensource',
-    text: 'Open-source enthusiast, collaborating and innovating with developers worldwide',
+    text: 'Collaborating and innovating with developers worldwide on open-source projects 🌐',
     icon: RepoForkedIcon,
   },
 ];

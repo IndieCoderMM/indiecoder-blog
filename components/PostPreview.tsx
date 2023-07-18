@@ -53,7 +53,7 @@ const PostPreview = (props: Post) => {
           ))}
         </ul>
 
-        <div className="relative flexBetween text-gray-400 text-sm mt-3">
+        <div className="flexBetween flex-wrap text-gray-400 text-sm mt-3">
           <div className="flexCenter gap-1">
             <CalendarDaysIcon
               className={iconStyle}
