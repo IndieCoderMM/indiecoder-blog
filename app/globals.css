@@ -37,7 +37,7 @@ body {
 }
 
 .darkBorder {
-  @apply dark:border dark:border-accent-color;
+  @apply border border-transparent dark:border-accent-color;
 }
 
 .maxContentWidth {

@@ -17,17 +17,17 @@ interface CardStyle {
 }
 const CardStyle: CardStyle = {
   easy: {
-    text: 'text-green-400',
+    text: 'text-green-500',
     bg: 'bg-green-200',
     icon: CheckBadgeIcon,
   },
   medium: {
-    text: 'text-yellow-400',
+    text: 'text-yellow-500',
     bg: 'bg-yellow-200',
     icon: ShieldExclamationIcon,
   },
   hard: {
-    text: 'text-red-400',
+    text: 'text-red-500',
     bg: 'bg-red-200',
     icon: FireIcon,
   },

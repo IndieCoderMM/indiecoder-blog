@@ -23,13 +23,13 @@ const Navbar = () => {
   const activeIconStyle = linkIconStyle + ' text-accent-color';
 
   return (
-    <nav className="sticky top-0 z-50 w-full maxContentWidth bg-white border-b border-slate-400 dark:bg-dark-gray py-1">
+    <nav className="sticky top-0 z-50 w-full maxContentWidth bg-white border-b border-slate-600 dark:bg-dark-gray py-3">
       <ul className="flex justify-around items-center w-full">
         {NavLinks.map((link) => (
           <motion.li
             className={`flex justify-center rounded-full overflow-hidden ${
               currentRoute === link.href &&
-              'bg-accent-color-light dark:bg-transparent dark:border border-accent-color'
+              'bg-accent-color-light dark:bg-transparent darkBorder'
             }`}
             key={link.key}
             whileTap="tap"

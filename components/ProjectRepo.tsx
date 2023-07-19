@@ -5,7 +5,7 @@ import { Project } from '@/common.types';
 
 const ProjectRepo = (props: Project) => {
   return (
-    <div className="flex flex-col relative h-full text-slate-500 dark:text-slate-200 dark:bg-light-brown border border-slate-300 rounded-md p-5 gap-3 hover:shadow">
+    <div className="flex flex-col relative h-full text-slate-600 dark:text-slate-200 dark:bg-light-brown border border-slate-600 rounded-md p-5 gap-3 hover:shadow">
       <header className="flex items-center flex-wrap gap-1 ">
         <RepoIcon className="w-6 h-6 text-slate-400 fill-current" />
         <h3>

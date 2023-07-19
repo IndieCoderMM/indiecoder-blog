@@ -46,13 +46,8 @@ const AboutPage = () => {
           </div>
         </li>
         <li className="flex gap-4 ">
-          <div
-            className={
-              iconStyle +
-              ' bg-indigo-400 dark:bg-indigo-500 dark:border-indigo-500'
-            }
-          >
-            <InboxArrowDownIcon className="w-7 h-7 text-white" />
+          <div className={iconStyle + ' bg-indigo-400'}>
+            <InboxArrowDownIcon className="w-7 h-7 text-white dark:text-accent-color" />
           </div>
           <div className="flex-1">
             <p>You can send a message directly to my inbox here.</p>

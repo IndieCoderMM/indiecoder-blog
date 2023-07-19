@@ -5,15 +5,15 @@ import formatDate from '@/utils/formatDate';
 import {
   CalendarDaysIcon,
   ArrowTopRightOnSquareIcon,
-  LanguageIcon,
   BookOpenIcon,
+  GlobeAltIcon,
 } from '@heroicons/react/24/outline';
 import calculateReadingTime from '@/utils/calculateReadingTime';
 
 const PostPreview = (props: Post) => {
   const iconStyle = 'w-6 h-6';
   return (
-    <div className="relative shadow rounded-sm h-full transition-all duration-75 ease-in dark:bg-light-brown hover:shadow-lg border border-slate-100 dark:border-gray-400  overflow-hidden">
+    <div className="relative shadow rounded-sm h-full transition-all duration-75 ease-in hover:shadow-lg border border-slate-300 dark:border-slate-600 overflow-hidden">
       {props.coverImage && (
         <div className="p-1">
           <Image
@@ -46,7 +46,7 @@ const PostPreview = (props: Post) => {
           </h3>
         </header>
 
-        <p className="text-slate-500">{props.excerpt}</p>
+        <p className="text-slate-500 dark:text-slate-300">{props.excerpt}</p>
         <ul className="flex gap-3 text-sm text-slate-500 flex-wrap">
           {props.categories?.map((category) => (
             <li key={category.slug}>#{category.slug}</li>
@@ -73,7 +73,7 @@ const PostPreview = (props: Post) => {
             </div>
           )}
           <div className="flexCenter gap-1">
-            <LanguageIcon className={iconStyle} aria-label="written language" />
+            <GlobeAltIcon className={iconStyle} aria-label="written language" />
             <p>{props.language}</p>
           </div>
         </div>
