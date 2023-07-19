@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Blog Website
+
+Welcome to the repository for my personal blog website. This project contains all the code and resources for my blog. Feel free to visit my blog at [www.indiecoder.tech](https://www.indiecoder.tech/). I'm excited to hear your thoughts and feedback! 
+
+## Tech Stack 
+
+- Next.js + TypeScript + TailwindCSS
+- GraphCMS: provides easy-to-use GraphQL API for managing contents
+- Giscus: A lightweight comment system built using GitHub's discussion API
+- Formspree: A form backend service
 
 ## Getting Started
 
-First, run the development server:
+To set up this project locally, follow the steps below.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+**Prerequisite**
+
+This project uses GraphCMS to manage the content. 
+- You can set up a new GraphCMS project and add your own content. 
+- Or you can use `constants/sample.ts` for the development purposes.
+
+**Installation**
+
+1. Clone the repository to your project folder.
+```sh
+cd my-project
+git clone git@github.com:IndieCoderMM/indiecoder-blog.git .
 ```
+2. Install dependencies:
+```sh
+npm install
+```
+3. Start the development server:
+```sh
+npm run dev
+```
+4. Open your browser and navigate to `http://localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Feedback and Support
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Your feedback and suggestions are greatly appreciated. 
+If you encounter any issues, have questions with anything related to the blog or its codebase, please don't hesitate to reach out. You can either [open an issue here](https://github.com/IndieCoderMM/indiecoder-blog/issues/new) or contact me using the following:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Gmail: hthant00chk@gmail.com
+- LinkedIn: [hthantoo](https://www.linkedin.com/in/hthantoo/)
 
-## Learn More
+## Inspiration
 
-To learn more about Next.js, take a look at the following resources:
+- This project was inspired by [Tania Rascia's Website](https://www.taniarascia.com/)
+- UI design is based on the awesome [Hugo Theme Luna](https://github.com/Ice-Hazymoon/hugo-theme-luna) 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is open-source and licensed under the [MIT License](./LICENSE).
 
-## Deploy on Vercel
+Happy coding! 🚀
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
