@@ -9,7 +9,7 @@ const AboutPage = () => {
   return (
     <section>
       <h2 className="pageHeading">About Me</h2>
-      <ul className="border-l-2 dark:border-accent-color pl-8 pt-8 pr-1 flex flex-col gap-5 w-[85%] max-w-3xl mx-auto">
+      <ul className="border-l-2 dark:border-accent-color pl-8 pt-8 pr-1 flex flex-col gap-5 w-[90%] max-w-3xl mx-auto">
         {AboutMe.map((data) => (
           <li className="flex items-center gap-4" key={data.key}>
             <div className={iconStyle + ' bg-accent-color-light'}>

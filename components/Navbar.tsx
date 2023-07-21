@@ -23,7 +23,7 @@ const Navbar = () => {
   const activeIconStyle = linkIconStyle + ' text-accent-color';
 
   return (
-    <nav className="sticky top-0 z-50 w-full maxContentWidth bg-white border-b border-slate-600 dark:bg-dark-gray py-3">
+    <nav className="sticky top-0 z-50 w-full maxContentWidth bg-white border-b border-slate-400 dark:border-slate-600 dark:bg-dark-gray py-3">
       <ul className="flex justify-around items-center w-full">
         {NavLinks.map((link) => (
           <motion.li
