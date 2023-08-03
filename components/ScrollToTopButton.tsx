@@ -28,7 +28,7 @@ const ScrollToTopButton = () => {
 
   useEffect(() => {
     return scrollYProgress.on('change', (latestValue) => {
-      if (latestValue > 0.3) {
+      if (latestValue > 0.2) {
         controls.start('show');
       } else {
         controls.start('hide');

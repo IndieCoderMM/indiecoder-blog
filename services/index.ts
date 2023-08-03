@@ -30,7 +30,7 @@ interface Projects {
 export const getPosts = async () => {
   const query = gql`
     query GetPosts {
-      postsConnection(orderBy: originalDate_DESC) {
+      postsConnection(last: 20, orderBy: originalDate_DESC) {
         edges {
           node {
             id

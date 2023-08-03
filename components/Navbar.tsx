@@ -6,12 +6,35 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 const spanVariants = {
-  open: { opacity: 1, scale: 1 },
-  closed: { opacity: 0, scale: 0 },
+  closed: {
+    opacity: 0,
+    width: 0,
+  },
+  open: {
+    opacity: 100,
+    width: 'auto',
+    transition: {
+      type: 'tween',
+      delay: 0.25,
+      duration: 0.25,
+      ease: 'easeOut',
+    },
+  },
 };
 
 const linkVariants = {
-  tap: { scale: 1.2 },
+  idle: {
+    scale: 1,
+  },
+  tap: {
+    scale: 1.5,
+    transition: {
+      type: 'spring',
+      delay: 0.25,
+      duration: 0.25,
+      ease: 'easeOut',
+    },
+  },
 };
 
 const Navbar = () => {
@@ -23,15 +46,15 @@ const Navbar = () => {
   const activeIconStyle = linkIconStyle + ' text-accent-color';
 
   return (
-    <nav className="sticky top-0 z-50 w-full maxContentWidth bg-white border-b border-slate-400 dark:border-slate-600 dark:bg-dark-gray py-3">
+    <nav className="sticky top-0 z-50 w-full maxContentWidth bg-white border-b border-slate-400 dark:border-slate-600 dark:bg-dark-gray py-1">
       <ul className="flex justify-around items-center w-full">
         {NavLinks.map((link) => (
           <motion.li
-            className={`flex justify-center rounded-full overflow-hidden ${
-              currentRoute === link.href &&
-              'bg-accent-color-light dark:bg-transparent darkBorder'
+            className={`flex justify-center rounded-full overflow-hidden dark:bg-transparent ${
+              currentRoute === link.href && 'bg-accent-color-light  darkBorder'
             }`}
             key={link.key}
+            initial="idle"
             whileTap="tap"
             variants={linkVariants}
           >
@@ -42,16 +65,14 @@ const Navbar = () => {
                 }
               />
 
-              <motion.span
-                className={`font-medium text-accent-color ${
-                  currentRoute !== link.href && 'absolute'
-                }`}
-                animate={currentRoute === link.href ? 'open' : 'closed'}
-                variants={spanVariants}
+              <motion.div
                 initial="closed"
+                animate={currentRoute === link.href ? 'open' : 'closed'}
+                className={`font-medium text-accent-color`}
+                variants={spanVariants}
               >
                 {link.text}
-              </motion.span>
+              </motion.div>
             </Link>
           </motion.li>
         ))}
