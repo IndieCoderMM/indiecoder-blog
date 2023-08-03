@@ -7,9 +7,9 @@ import Providers from '@/components/Providers';
 import Navbar from '@/components/Navbar';
 
 export const metadata = {
-  title: 'IndieCoder Blog',
+  title: 'IndieCoder | Tech Blog for Aspiring Developers in Myanmar',
   description:
-    'Welcome to my blog, where I share my experiences, insights and lessons learned on my coding journey.',
+    "Join me on my coding journey as I share articles, insights and lessons learned. Let's code together!",
 };
 
 export default function RootLayout({
