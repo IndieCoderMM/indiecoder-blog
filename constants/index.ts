@@ -1,35 +1,36 @@
-import { GitHubIcon, LinkedInIcon, RepoForkedIcon } from '@/components/icons';
+import { GitHubIcon, LinkedInIcon, RepoForkedIcon } from "@/components/icons";
 import {
   CommandLineIcon,
   HeartIcon,
   PencilIcon,
-} from '@heroicons/react/24/outline';
+} from "@heroicons/react/24/outline";
 import {
   HomeIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   CodeBracketSquareIcon,
   PuzzlePieceIcon,
   EnvelopeIcon,
-} from '@heroicons/react/24/solid';
+  GlobeAltIcon,
+} from "@heroicons/react/24/solid";
 
 export const NavLinks = [
-  { href: '/', text: 'Posts', key: 'posts', icon: HomeIcon },
+  { href: "/", text: "Posts", key: "posts", icon: HomeIcon },
   {
-    href: '/about',
-    text: 'About',
-    key: 'about',
+    href: "/about",
+    text: "About",
+    key: "about",
     icon: ChatBubbleOvalLeftEllipsisIcon,
   },
   {
-    href: '/projects',
-    text: 'Projects',
-    key: 'projects',
+    href: "/projects",
+    text: "Projects",
+    key: "projects",
     icon: CodeBracketSquareIcon,
   },
   {
-    href: '/solutions',
-    text: 'Solutions',
-    key: 'solutions',
+    href: "/solutions",
+    text: "Solutions",
+    key: "solutions",
     icon: PuzzlePieceIcon,
   },
 ];
@@ -39,41 +40,46 @@ export const NavLinks = [
 
 export const AboutMe = [
   {
-    key: 'intro',
+    key: "intro",
     text: "Hi there, 👋 I'm Hein Thant, a web developer from Myanmar",
     icon: HeartIcon,
   },
   {
-    key: 'headline',
-    text: 'Passionate about code, addicted to coffee ☕',
+    key: "headline",
+    text: "Passionate about code, addicted to coffee ☕",
     icon: CommandLineIcon,
   },
   {
-    key: 'blogging',
-    text: 'Blogging about my experiences ✍ to help others and to keep track of my own journey',
+    key: "blogging",
+    text: "Blogging about my experiences ✍ to help others and to keep track of my own journey",
     icon: PencilIcon,
   },
   {
-    key: 'opensource',
-    text: 'Collaborating and innovating with developers worldwide on open-source projects 🌐',
+    key: "opensource",
+    text: "Collaborating and innovating with developers worldwide on open-source projects 🌐",
     icon: RepoForkedIcon,
   },
 ];
 
 export const SocialLinks = [
   {
-    href: 'https://github.com/IndieCoderMM',
+    href: "https://github.com/IndieCoderMM",
     icon: GitHubIcon,
-    name: 'GitHub',
+    name: "GitHub",
   },
   {
-    href: 'https://www.linkedin.com/in/hthantoo/',
+    href: "https://www.linkedin.com/in/hthantoo/",
     icon: LinkedInIcon,
-    name: 'LinkedIn',
+    name: "LinkedIn",
   },
   {
-    href: 'mailto:hthant00chk@gmail.com',
+    href: "https://www.heinthantoo.me",
+    icon: GlobeAltIcon,
+    name: "Portfolio",
+  },
+  {
+    href: "mailto:hthant00chk@gmail.com",
     icon: EnvelopeIcon,
-    name: 'Gmail',
+    name: "Gmail",
   },
 ];

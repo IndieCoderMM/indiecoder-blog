@@ -8,7 +8,7 @@ export default async function Home() {
   const posts = await getPosts();
 
   const postPreviews = posts
-    .slice(4)
+    .slice(4, 10)
     .map((post) => <PostPreview key={post.id} {...post} />);
 
   return (
@@ -17,7 +17,9 @@ export default async function Home() {
       <FeaturedPosts {...posts} />
       <section className="w-full px-0 py-2 lg:px-8 lg:py-16 xl:px-16">
         <h2 className="mb-8 text-2xl font-bold lg:text-4xl">Recent Posts</h2>
-        <div className="mx-auto grid w-full max-w-xl gap-4">{postPreviews}</div>
+        <div className="mx-auto grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {postPreviews}
+        </div>
       </section>
     </>
   );
