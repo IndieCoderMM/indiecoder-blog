@@ -1,25 +1,25 @@
-import PostPreview from '@/components/PostPreview';
-import { getPosts } from '@/services';
-import { NewspaperIcon } from '@heroicons/react/24/outline';
+import FeaturedPosts from "@/components/FeaturedPosts";
+import HeroSection from "@/components/HeroSection";
+import PostPreview from "@/components/PostPreview";
+import { getPosts } from "@/services";
+import { NewspaperIcon } from "@heroicons/react/24/outline";
 
 export default async function Home() {
   const posts = await getPosts();
 
-  const postPreviews = posts.map((post) => (
-    <PostPreview key={post.id} {...post} />
-  ));
+  const postPreviews = posts
+    .slice(4)
+    .map((post) => <PostPreview key={post.id} {...post} />);
 
   return (
-    <section>
-      <header className="flex items-center pageHeading mb-5">
-        <NewspaperIcon className="w-8 h-8" />
-        <h2>
-          <span className="mr-1">{posts.length}</span>
-          Posts Total
-        </h2>
-      </header>
-      <div className="grid gap-4 w-full max-w-xl mx-auto">{postPreviews}</div>
-    </section>
+    <>
+      <HeroSection {...posts[0]} />
+      <FeaturedPosts {...posts} />
+      <section className="w-full px-0 py-2 lg:px-8 lg:py-16 xl:px-16">
+        <h2 className="mb-8 text-2xl font-bold lg:text-4xl">Recent Posts</h2>
+        <div className="mx-auto grid w-full max-w-xl gap-4">{postPreviews}</div>
+      </section>
+    </>
   );
 }
 

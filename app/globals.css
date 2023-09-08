@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,21 +11,25 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @layer base {
   body {
-    @apply dark:bg-dark-gray bg-white dark:text-light-gray;
+    @apply bg-white dark:bg-dark-gray dark:text-light-gray;
   }
 }
 
+.paddings {
+  @apply px-4 py-2 lg:px-8 lg:py-4 xl:px-12 xl:py-6;
+}
+
 .flexCenter {
-  @apply flex justify-center items-center;
+  @apply flex items-center justify-center;
 }
 
 .flexBetween {
-  @apply flex justify-between items-center;
+  @apply flex items-center justify-between;
 }
 
 .flexStart {
@@ -41,15 +45,15 @@ body {
 }
 
 .maxContentWidth {
-  @apply max-w-3xl mx-auto;
+  @apply mx-auto max-w-7xl;
 }
 
 .pageHeading {
-  @apply text-slate-500 text-xl font-semibold dark:text-light-gray;
+  @apply text-xl font-semibold text-slate-500 dark:text-light-gray;
 }
 
 .inputField {
-  @apply block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 dark:bg-light-gray shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6;
+  @apply block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 dark:bg-light-gray sm:text-sm sm:leading-6;
 }
 
 .primaryBtn {
@@ -57,7 +61,7 @@ body {
 }
 
 .expandLink::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
