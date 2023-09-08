@@ -1,15 +1,19 @@
-'use client';
+"use client";
 
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react";
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
-const FORM_ID = process.env.NEXT_PUBLIC_FORM_ID || 'myformid';
+const FORM_ID = process.env.NEXT_PUBLIC_FORM_ID || "myformid";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm(FORM_ID);
   return (
-    <form onSubmit={handleSubmit} className="grid gap-3 mt-3">
+    <form
+      onSubmit={handleSubmit}
+      className="mx-auto mt-3 grid w-full max-w-3xl gap-3"
+    >
       {state.succeeded && (
-        <p className="text-sm bg-green-200 text-green-800 rounded-sm p-2">
+        <p className="rounded-sm bg-green-200 p-2 text-sm text-green-800">
           <strong>Message Sent! 💌</strong>
           <p className="text-xs">
             Thanks for reaching out to me! 😃 Your message has made its way to
@@ -44,7 +48,7 @@ const ContactForm = () => {
         errors={state.errors}
         className="text-xs text-rose-600"
       />
-      <div className="flex flex-col md:flex-row gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row">
         <label htmlFor="email-address" className="sr-only">
           Email address
         </label>
@@ -55,14 +59,15 @@ const ContactForm = () => {
           autoComplete="email"
           required
           className="inputField"
-          placeholder="Enter your email"
+          placeholder="Enter your email address"
         />
         <button
           type="submit"
-          className="primaryBtn"
+          className="primaryBtn items-base flex justify-center gap-2"
           disabled={state.submitting}
         >
-          Send Message
+          Send
+          <PaperAirplaneIcon className="h-6 w-6 -rotate-45" />
         </button>
       </div>
     </form>

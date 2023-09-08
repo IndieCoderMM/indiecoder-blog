@@ -27,10 +27,10 @@ const linkVariants = {
     scale: 1,
   },
   tap: {
-    scale: 1.5,
+    scale: 1.2,
     transition: {
       type: "spring",
-      delay: 0.25,
+      delay: 0,
       duration: 0.25,
       ease: "easeOut",
     },

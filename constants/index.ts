@@ -11,6 +11,8 @@ import {
   PuzzlePieceIcon,
   EnvelopeIcon,
   GlobeAltIcon,
+  HashtagIcon,
+  TagIcon,
 } from "@heroicons/react/24/solid";
 
 export const NavLinks = [

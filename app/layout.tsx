@@ -7,9 +7,18 @@ import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "IndieCoder | Tech Blog for Aspiring Developers in Myanmar",
+  title: "IndieCoder's Blog | Web Development Articles & Tutorials",
+  keywords: [
+    "web development",
+    "React",
+    "Python",
+    "game development",
+    "tutorials",
+    "coding",
+    "web design",
+  ],
   description:
-    "Join me on my coding journey as I share articles, insights and lessons learned. Let's code together!",
+    "Join me on my coding journey as I share articles, insights and lessons learned. Learn about React, Web Development, Python and game development.",
 };
 
 export default function RootLayout({

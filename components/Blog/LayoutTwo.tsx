@@ -8,7 +8,7 @@ const LayoutTwo = (post: Post) => {
   return (
     <div className="group relative grid grid-cols-12 gap-2">
       <Link
-        href={`/posts/${post.slug}`}
+        href={post.externalLink ? post.externalLink : `posts/${post.slug}`}
         className="absolute bottom-0 left-0 right-0 top-0 z-10"
       >
         <span className="sr-only">Read {post.title}</span>
