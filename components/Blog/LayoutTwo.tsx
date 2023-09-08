@@ -23,7 +23,7 @@ const LayoutTwo = (post: Post) => {
         />
       </div>
 
-      <div className="col-span-8">
+      <div className="col-span-8 flex flex-col justify-center ">
         <span className="text-sm font-bold text-accent-color">
           #{post.categories[0].name}
         </span>

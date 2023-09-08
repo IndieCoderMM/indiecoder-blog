@@ -13,7 +13,7 @@ import calculateReadingTime from "@/utils/calculateReadingTime";
 const PostPreview = (props: Post) => {
   const iconStyle = "w-6 h-6";
   return (
-    <div className="group relative h-full overflow-hidden rounded-xl shadow-sm transition-all duration-75 ease-in hover:shadow-xl dark:border-slate-600">
+    <div className="group relative h-full overflow-hidden rounded-xl bg-white shadow-sm transition-all duration-75 ease-in hover:shadow-xl dark:border-slate-600 dark:bg-light-brown">
       {props.coverImage && (
         <div className="overflow-hidden rounded-t-xl">
           <Image
@@ -27,7 +27,7 @@ const PostPreview = (props: Post) => {
         </div>
       )}
       <section className="grid gap-2 p-3  lg:px-5">
-        <header className="expandLink text-lg font-medium text-dark-gray hover:underline">
+        <header className="expandLink text-lg font-medium text-dark-gray hover:underline dark:text-light-gray">
           <h3>
             <Link
               href={

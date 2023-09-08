@@ -7,7 +7,7 @@ const HeroSection = (post: Post) => {
   return (
     <div className="w-full">
       <article className="relative flex h-[50vh] flex-col items-start justify-end xl:h-[85vh]">
-        <div className="absolute bottom-0 left-0 right-0 top-0 z-0 rounded-2xl bg-gradient-to-b from-transparent via-black/70 to-black/90" />
+        <div className="absolute bottom-0 left-0 right-0 top-0 z-0 rounded-2xl bg-gradient-to-b from-transparent to-black/90" />
         <Image
           priority
           src={post?.coverImage?.url}
