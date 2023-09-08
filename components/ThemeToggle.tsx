@@ -1,8 +1,8 @@
 "use client";
 
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { MoonIcon, SunIcon } from "./icons";
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -20,13 +20,19 @@ const ThemeToggle = () => {
       onClick={() =>
         currentTheme == "dark" ? setTheme("light") : setTheme("dark")
       }
-      className="rounded-lg border border-slate-300 p-1 lg:border-none"
+      className="rounded-lg border border-slate-300 p-1"
     >
       <span className="sr-only">Toggle Theme</span>
       {currentTheme === "dark" ? (
-        <SunIcon className=" text-yellow-400" key="sun" />
+        <SunIcon
+          className="h-6 w-6 text-yellow-400 md:h-12 md:w-12"
+          key="sun"
+        />
       ) : (
-        <MoonIcon className=" text-yellow-400" key="moon" />
+        <MoonIcon
+          className="h-6 w-6 text-yellow-400 md:h-12 md:w-12"
+          key="moon"
+        />
       )}
     </button>
   );
