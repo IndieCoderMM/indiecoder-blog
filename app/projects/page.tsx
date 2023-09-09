@@ -1,6 +1,10 @@
 import ProjectRepo from "@/components/ProjectRepo";
 import { getProjects } from "@/services";
 
+export const metadata = {
+  title: "Explore Latest Tutorial Projects on IndieCoder's Blog",
+};
+
 const ProjectPage = async () => {
   const projects = await getProjects();
   return (

@@ -24,12 +24,12 @@ const ThemeToggle = () => {
     >
       <span className="sr-only">Toggle Theme</span>
       {currentTheme === "dark" ? (
-        <SunIcon className="h-6 w-6 text-yellow-400 md:h-8 md:w-8" key="sun" />
-      ) : (
         <MoonIcon
           className="h-6 w-6 text-yellow-400 md:h-8 md:w-8"
           key="moon"
         />
+      ) : (
+        <SunIcon className="h-6 w-6 text-yellow-400 md:h-8 md:w-8" key="sun" />
       )}
     </button>
   );

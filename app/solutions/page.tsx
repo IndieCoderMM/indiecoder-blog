@@ -1,6 +1,10 @@
 import SolutionCard from "@/components/SolutionCard";
 import { getSolutions } from "@/services";
 
+export const metadata = {
+  title: "Level Up Coding Skills with LeetCode Solutions | IndieCoder's Blog",
+};
+
 const SolutionsPage = async () => {
   const solutions = await getSolutions();
 

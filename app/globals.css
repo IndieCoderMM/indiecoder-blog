@@ -36,7 +36,7 @@ body {
 .dark {
   --background: #000;
   --foreground: #171717;
-  --accent: #4e57ef;
+  --accent: #11a6a6;
   --accent-light: #818cf8;
   --primary: #fff;
   --border: #c9cacc1e;
@@ -67,7 +67,7 @@ body {
 }
 
 .darkBorder {
-  @apply dark:border-accent border border-transparent;
+  @apply border border-transparent dark:border-accent;
 }
 
 .maxContentWidth {
@@ -75,19 +75,19 @@ body {
 }
 
 .pageHeading {
-  @apply dark:text-gray-light text-xl font-semibold text-slate-500;
+  @apply text-xl font-semibold text-slate-500 dark:text-gray-light;
 }
 
 .inputField {
-  @apply focus:ring-accent bg-light text-dark block w-full rounded-md border-0 px-4 py-2 text-sm shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus-visible:outline-none sm:leading-6 lg:px-6 lg:py-3 lg:text-lg;
+  @apply block w-full rounded-md border-0 bg-light px-4 py-2 text-sm text-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent focus-visible:outline-none sm:leading-6 lg:px-6 lg:py-3 lg:text-lg;
 }
 
 .primaryBtn {
-  @apply hover:shadow-hover block max-w-[250px] rounded-full border px-2 py-2 text-center font-semibold transition-all hover:translate-x-[2px] hover:translate-y-[-2px] sm:px-8 lg:px-10 lg:py-4;
+  @apply block max-w-[250px] rounded-full border px-4 py-2 text-center font-semibold transition-all hover:translate-x-[2px] hover:translate-y-[-2px] hover:shadow-hover sm:px-8 lg:px-10 lg:py-4;
 }
 
 .submitBtn {
-  @apply bg-accent text-light hover:border-accent hover:text-accent focus-visible:outline-accent rounded-md border-2 border-transparent px-4 py-3 text-sm font-semibold shadow-sm hover:bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 lg:text-lg;
+  @apply rounded-md border-2 border-transparent bg-accent px-4 py-3 text-sm font-semibold text-light shadow-sm hover:border-accent hover:bg-transparent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent lg:text-lg;
 }
 
 .expandLink::before {

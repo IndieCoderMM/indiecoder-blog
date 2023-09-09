@@ -37,12 +37,13 @@ const ScrollToTopButton = () => {
   });
   return (
     <motion.button
-      className="hover:bg-accent fixed bottom-3 right-3  z-50 flex h-10 w-10 items-center justify-center rounded-full border border-slate-100 bg-white text-slate-500 shadow-lg hover:text-white lg:h-14 lg:w-14"
+      className="fixed bottom-3 right-3 z-50  flex h-10 w-10 items-center justify-center rounded-full border border-slate-100 bg-white text-slate-500 shadow-lg hover:bg-accent hover:text-white lg:h-14 lg:w-14"
       onClick={scrollToTop}
       variants={ScrollToTopContainerVariants}
       initial="hide"
       whileHover="hover"
       animate={controls}
+      aria-label="Scroll to top"
     >
       <ArrowUpIcon className="h-8 w-8" />
     </motion.button>

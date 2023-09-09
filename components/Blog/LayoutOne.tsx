@@ -14,24 +14,25 @@ const LayoutOne = (post: Post) => {
         <span className="sr-only">Read {post.title}</span>
       </Link>
       <Image
+        priority
         src={post?.coverImage?.url}
         alt={post.title}
-        width={500}
-        height={500}
-        className="-z-10 h-full w-full rounded-xl object-cover object-top transition-all duration-300 group-hover:scale-105"
+        width={1600}
+        height={840}
+        className="-z-10 h-full w-full rounded-xl object-fill transition-all duration-300 group-hover:scale-105"
       />
 
-      <div className="absolute bottom-0 left-0 right-0 top-0 z-0 flex flex-col justify-end bg-gradient-to-b from-transparent to-black/90 p-4 sm:gap-2 xl:p-10">
+      <div className="absolute bottom-0 left-0 right-0 top-0 z-0 flex flex-col justify-end bg-gradient-to-b from-transparent via-black/70 to-black/90 p-4 sm:gap-2 xl:p-10">
         <Tag
-          className="text-light z-10 text-sm font-medium"
+          className="z-10 text-sm font-medium text-light"
           category={post.categories[0]}
         />
         <h1 className="text-lg font-bold leading-tight text-white md:text-3xl xl:text-4xl">
-          <span className="from-accent to-accent bg-gradient-to-r bg-[length:0px_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_4px]">
+          <span className="bg-gradient-to-r from-accent to-accent bg-[length:0px_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_4px]">
             {post.title}
           </span>
         </h1>
-        <p className="text-light hidden text-xl font-medium lg:inline-block">
+        <p className="hidden text-xl font-medium text-light lg:inline-block">
           {post.excerpt}
         </p>
       </div>

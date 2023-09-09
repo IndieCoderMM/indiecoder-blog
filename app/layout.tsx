@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar";
+import Script from "next/script";
 
 export const metadata = {
   title: "IndieCoder's Blog | Web Development Articles & Tutorials",
@@ -28,6 +29,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-GBR4F3KSKM', {
+            page_path: window.location.pathname,
+          });
+        `,
+        }}
+      />
       <body>
         <Providers>
           <Header />

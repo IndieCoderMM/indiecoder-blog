@@ -35,7 +35,7 @@ const CardStyle: CardStyle = {
 
 const SolutionCard = ({ solution }: { solution: Solution }) => {
   const buttonStyle =
-    "py-1 px-3 border text-accent rounded-md flexCenter hover:shadow dark:bg-light-brown";
+    "py-1 px-3 border border-border text-accent rounded-md flexCenter hover:shadow bg-foreground";
   const level = solution.level.toLowerCase();
   const { text: textStyle, bg: bgStyle, icon: Icon } = CardStyle[level];
 
@@ -43,7 +43,7 @@ const SolutionCard = ({ solution }: { solution: Solution }) => {
     <div
       className={
         bgStyle +
-        " border-border flex flex-col overflow-hidden rounded-lg shadow dark:border"
+        " flex flex-col overflow-hidden rounded-lg border-border shadow dark:border"
       }
     >
       <div className="h-12 overflow-hidden">
@@ -53,7 +53,7 @@ const SolutionCard = ({ solution }: { solution: Solution }) => {
           }
         />
       </div>
-      <div className="bg-foreground flex h-full flex-col items-start gap-3 rounded-t-2xl p-3">
+      <div className="flex h-full flex-col items-start gap-3 rounded-t-2xl bg-foreground p-3">
         <header className="w-full">
           <h3 className="font-medium">{solution.title}</h3>
           <div className="flex justify-between">

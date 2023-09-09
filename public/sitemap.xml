@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.indiecoder.tech/</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/about</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/all</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/projects</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/solutions</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/webdev</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/react</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/posts/snake-game-in-python-ii</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/posts/snake-game-in-python-i</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/posts/objects-classes-in-python</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/posts/tic-tac-toe-ai-with-python-ii</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/posts/tic-tac-toe-ai-with-python-i</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/functional</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/productivity</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/python</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/gamedev</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/oop</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/tutorial</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/algo</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/categories/nextjs</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/posts/lambda-functions-in-python</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/posts/args-kwargs-in-python</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.indiecoder.tech/posts/how-to-use-tinydb</loc>
+  <lastmod>2023-09-09T17:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
