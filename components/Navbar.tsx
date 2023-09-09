@@ -41,17 +41,17 @@ const Navbar = () => {
   const currentRoute = usePathname();
 
   const linkStyle =
-    "flexCenter w-auto gap-1 px-3 py-1 text-slate-500 dark:text-light-gray hover:text-accent-color hover:dark:text-accent-color";
+    "flexCenter w-auto gap-1 px-3 py-1 text-gray-light hover:text-primary hover:dark:text-primary";
   const linkIconStyle = "w-8 h-8";
-  const activeIconStyle = linkIconStyle + " text-accent-color";
+  const activeIconStyle = linkIconStyle + " text-accent";
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-slate-300 bg-white py-2 dark:border-slate-600 dark:bg-dark-gray lg:fixed lg:left-1/2 lg:top-2 lg:max-w-lg lg:translate-x-[-50%] lg:rounded-full lg:border xl:max-w-2xl xl:py-4">
+    <nav className="border-border bg-foreground sticky top-0 z-50 w-full border-b py-2 lg:fixed lg:left-1/2 lg:top-2 lg:max-w-lg lg:translate-x-[-50%] lg:rounded-full lg:border xl:max-w-2xl xl:py-4">
       <ul className="flex w-full items-center justify-around">
         {NavLinks.map((link) => (
           <motion.li
             className={`flex justify-center overflow-hidden rounded-full dark:bg-transparent ${
-              currentRoute === link.href && "darkBorder  bg-accent-color-light"
+              currentRoute === link.href && "darkBorder  bg-light"
             }`}
             key={link.key}
             initial="idle"
@@ -68,7 +68,7 @@ const Navbar = () => {
               <motion.div
                 initial="closed"
                 animate={currentRoute === link.href ? "open" : "closed"}
-                className={`font-medium text-accent-color`}
+                className={`text-accent font-medium`}
                 variants={spanVariants}
               >
                 {link.text}

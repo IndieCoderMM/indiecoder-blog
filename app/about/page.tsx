@@ -9,18 +9,18 @@ const AboutPage = () => {
   return (
     <section className="mx-auto max-w-7xl">
       <h2 className="pageHeading">About Me</h2>
-      <ul className="mx-auto flex w-[90%] max-w-3xl flex-col gap-5 border-l-2 pl-8 pr-1 pt-8 dark:border-accent-color lg:gap-8">
+      <ul className="dark:border-accent mx-auto flex w-[90%] max-w-3xl flex-col gap-5 border-l-2 pl-8 pr-1 pt-8 lg:gap-8">
         {AboutMe.map((data) => (
           <li className="flex items-center gap-4" key={data.key}>
-            <div className={iconStyle + " bg-accent-color-light"}>
-              <data.icon className="h-7 w-7 text-accent-color" />
+            <div className={iconStyle + " bg-accent-light"}>
+              <data.icon className="text-accent h-7 w-7" />
             </div>
             <p className="text-lg md:text-xl">{data.text}</p>
           </li>
         ))}
         <li className="flex gap-4">
-          <div className={iconStyle + " bg-accent-color-light"}>
-            <UserPlusIcon className="h-7 w-7 text-accent-color" />
+          <div className={iconStyle + " bg-accent-light"}>
+            <UserPlusIcon className="text-accent h-7 w-7" />
           </div>
           <div className="flex-1">
             <p className="text-lg md:text-xl">
@@ -36,10 +36,10 @@ const AboutPage = () => {
                   href={link.href}
                   key={link.name}
                   title={link.name}
-                  className="text-light-gray transition duration-100 hover:scale-110"
+                  className="text-gray-light transition duration-100 hover:scale-110"
                 >
                   <span className="sr-only">{link.name}</span>
-                  <link.icon className="h-10 w-10 fill-accent-color stroke-none hover:fill-indigo-400" />
+                  <link.icon className="fill-accent h-10 w-10 stroke-none hover:fill-indigo-400" />
                 </Link>
               ))}
             </div>
@@ -47,7 +47,7 @@ const AboutPage = () => {
         </li>
         <li className="flex gap-4 ">
           <div className={iconStyle + " bg-indigo-400"}>
-            <InboxArrowDownIcon className="h-7 w-7 text-white dark:text-accent-color" />
+            <InboxArrowDownIcon className="dark:text-accent h-7 w-7 text-white" />
           </div>
           <div className="flex-1">
             <p>You can send a message directly to my inbox here.</p>

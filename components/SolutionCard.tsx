@@ -1,12 +1,12 @@
-import { Solution } from '@/common.types';
-import formatDate from '@/utils/formatDate';
-import { ClockIcon } from '@heroicons/react/24/outline';
+import { Solution } from "@/common.types";
+import formatDate from "@/utils/formatDate";
+import { ClockIcon } from "@heroicons/react/24/outline";
 import {
   FireIcon,
   CheckBadgeIcon,
   ShieldExclamationIcon,
-} from '@heroicons/react/24/solid';
-import Link from 'next/link';
+} from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 interface CardStyle {
   [key: string]: {
@@ -17,25 +17,25 @@ interface CardStyle {
 }
 const CardStyle: CardStyle = {
   easy: {
-    text: 'text-green-500',
-    bg: 'bg-green-200',
+    text: "text-green-500",
+    bg: "bg-green-200",
     icon: CheckBadgeIcon,
   },
   medium: {
-    text: 'text-yellow-500',
-    bg: 'bg-yellow-200',
+    text: "text-yellow-500",
+    bg: "bg-yellow-200",
     icon: ShieldExclamationIcon,
   },
   hard: {
-    text: 'text-red-500',
-    bg: 'bg-red-200',
+    text: "text-red-500",
+    bg: "bg-red-200",
     icon: FireIcon,
   },
 };
 
 const SolutionCard = ({ solution }: { solution: Solution }) => {
   const buttonStyle =
-    'py-1 px-3 border text-accent-color rounded-md flexCenter hover:shadow dark:bg-light-brown';
+    "py-1 px-3 border text-accent rounded-md flexCenter hover:shadow dark:bg-light-brown";
   const level = solution.level.toLowerCase();
   const { text: textStyle, bg: bgStyle, icon: Icon } = CardStyle[level];
 
@@ -43,32 +43,32 @@ const SolutionCard = ({ solution }: { solution: Solution }) => {
     <div
       className={
         bgStyle +
-        ' rounded-lg shadow overflow-hidden dark:border border-slate-500'
+        " border-border flex flex-col overflow-hidden rounded-lg shadow dark:border"
       }
     >
       <div className="h-12 overflow-hidden">
         <Icon
           className={
-            textStyle + ' w-14 h-14 transform rotate-[30deg] float-right '
+            textStyle + " float-right h-14 w-14 rotate-[30deg] transform "
           }
         />
       </div>
-      <div className="flex flex-col items-start gap-3 p-3 rounded-t-2xl bg-white dark:bg-dark-gray">
+      <div className="bg-foreground flex h-full flex-col items-start gap-3 rounded-t-2xl p-3">
         <header className="w-full">
           <h3 className="font-medium">{solution.title}</h3>
           <div className="flex justify-between">
             <span
-              className={`${textStyle} ${bgStyle} text-xs px-3 py-1 rounded-full`}
+              className={`${textStyle} ${bgStyle} rounded-full px-3 py-1 text-xs`}
             >
               {solution.level}
             </span>
             <div className="flex items-center text-xs">
-              <ClockIcon className="w-4 h-4" />
+              <ClockIcon className="h-4 w-4" />
               <span>{formatDate(solution.publishedAt)}</span>
             </div>
           </div>
         </header>
-        <div className="flex gap-1">
+        <div className="mt-auto flex gap-1">
           <Link
             href={solution.challengeLink}
             target="_blank"

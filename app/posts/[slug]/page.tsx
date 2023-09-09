@@ -47,7 +47,7 @@ const PostPage = async (props: any) => {
           <h1 className="mb-2 text-left text-3xl font-bold lg:text-5xl">
             {post.title}
           </h1>
-          <div className="flexStart flex-wrap gap-8 p-3 text-sm text-slate-500 dark:text-light-gray md:text-xl">
+          <div className="flexStart dark:text-gray-light flex-wrap gap-8 p-3 text-sm text-slate-500 md:text-xl">
             <div className="flex items-center gap-1">
               <CalendarDaysIcon className="h-6 w-6" />
               <span className="sr-only">Published At: </span>
@@ -62,7 +62,7 @@ const PostPage = async (props: any) => {
             <ul className="flex flex-wrap items-center gap-3">
               {post.categories.map((category) => (
                 <li
-                  className="darkBorder flex rounded-full bg-accent-color-light px-3 py-1 text-xs dark:bg-transparent md:text-lg"
+                  className="darkBorder bg-accent-light flex rounded-full px-3 py-1 text-xs dark:bg-transparent md:text-lg"
                   key={category.slug}
                 >
                   <span className="text-bold">#</span>

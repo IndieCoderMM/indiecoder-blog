@@ -17,7 +17,7 @@ const HeroSection = (post: Post) => {
         />
 
         <div className="z-0 flex w-full flex-col gap-4 p-4 lg:w-3/4 lg:p-8 xl:p-16">
-          <span className="text-lg font-bold text-accent-color">
+          <span className="text-accent text-lg font-bold">
             #{post.categories[0].name}
           </span>
 
@@ -25,7 +25,7 @@ const HeroSection = (post: Post) => {
             href={post.externalLink ? post.externalLink : `posts/${post.slug}`}
           >
             <h1 className="text-3xl font-bold leading-tight text-white lg:text-5xl">
-              <span className="bg-gradient-to-r from-accent-color to-accent-color bg-[length:0px_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_6px]">
+              <span className="from-accent to-accent bg-gradient-to-r bg-[length:0px_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_6px]">
                 {post.title}
               </span>
             </h1>
@@ -33,7 +33,7 @@ const HeroSection = (post: Post) => {
           <p className=" font-medium text-white lg:text-2xl">{post.excerpt}</p>
           <Link
             href={post.externalLink ? post.externalLink : `posts/${post.slug}`}
-            className="block max-w-[250px] rounded-full border border-light-gray px-8 py-2 text-center text-xl font-semibold text-white transition-colors hover:bg-light-gray hover:text-accent-color lg:px-10 lg:py-4 lg:text-2xl"
+            className="border-light hover:shadow-hover text-light block max-w-[250px] rounded-full border px-8 py-2 text-center text-xl font-semibold transition-all hover:translate-x-[2px] hover:translate-y-[-2px] hover:text-white lg:px-10 lg:py-4 lg:text-2xl"
           >
             Read More
           </Link>

@@ -20,17 +20,14 @@ const ThemeToggle = () => {
       onClick={() =>
         currentTheme == "dark" ? setTheme("light") : setTheme("dark")
       }
-      className="rounded-lg border border-slate-300 p-1"
+      className="flex flex-shrink-0 items-center justify-center rounded-lg p-1 transition-all hover:scale-105"
     >
       <span className="sr-only">Toggle Theme</span>
       {currentTheme === "dark" ? (
-        <SunIcon
-          className="h-6 w-6 text-yellow-400 md:h-12 md:w-12"
-          key="sun"
-        />
+        <SunIcon className="h-6 w-6 text-yellow-400 md:h-8 md:w-8" key="sun" />
       ) : (
         <MoonIcon
-          className="h-6 w-6 text-yellow-400 md:h-12 md:w-12"
+          className="h-6 w-6 text-yellow-400 md:h-8 md:w-8"
           key="moon"
         />
       )}

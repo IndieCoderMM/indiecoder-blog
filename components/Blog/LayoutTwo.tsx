@@ -24,20 +24,16 @@ const LayoutTwo = (post: Post) => {
       </div>
 
       <div className="col-span-8 flex flex-col justify-center ">
-        <span className="text-sm font-bold text-accent-color">
+        <span className="text-accent text-sm font-bold">
           #{post.categories[0].name}
         </span>
-        <h1 className="text-lg font-semibold leading-tight text-dark-gray dark:text-light-gray lg:text-2xl">
-          <span className="bg-gradient-to-r from-accent-color to-accent-color bg-[length:0px_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_6px]">
+        <h1 className="text-text text-lg font-semibold leading-tight lg:text-2xl">
+          <span className="from-accent to-accent bg-gradient-to-r bg-[length:0px_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_4px]">
             {post.title}
           </span>
         </h1>
-        <p className="hidden text-dark-gray/90 dark:text-light-gray xl:block">
-          {post.excerpt}
-        </p>
-        <p className=" text-slate-800 dark:text-slate-500">
-          {formatDate(post.originalDate)}
-        </p>
+        <p className="text-text hidden xl:block">{post.excerpt}</p>
+        <p className=" text-gray-light">{formatDate(post.originalDate)}</p>
       </div>
     </div>
   );
