@@ -45,13 +45,18 @@ const Navbar = () => {
   const linkIconStyle = "w-8 h-8";
   const activeIconStyle = linkIconStyle + " text-accent";
 
+  const isActive = (href: string) => {
+    if (href === "/") return currentRoute === href;
+    return currentRoute.includes(href.split("/")[1]);
+  };
+
   return (
-    <nav className="border-border bg-foreground sticky top-0 z-50 w-full border-b py-2 lg:fixed lg:left-1/2 lg:top-2 lg:max-w-lg lg:translate-x-[-50%] lg:rounded-full lg:border xl:max-w-2xl xl:py-4">
+    <nav className="border-border bg-foreground sticky top-0 z-50 w-full border-b py-2 md:px-4 lg:fixed lg:left-1/2 lg:top-2 lg:max-w-fit lg:translate-x-[-50%] lg:rounded-full lg:border">
       <ul className="flex w-full items-center justify-around">
         {NavLinks.map((link) => (
           <motion.li
             className={`flex justify-center overflow-hidden rounded-full dark:bg-transparent ${
-              currentRoute === link.href && "darkBorder  bg-light"
+              isActive(link.href) && "darkBorder  bg-light"
             }`}
             key={link.key}
             initial="idle"
@@ -61,14 +66,14 @@ const Navbar = () => {
             <Link href={link.href} title={link.text} className={linkStyle}>
               <link.icon
                 className={
-                  currentRoute === link.href ? activeIconStyle : linkIconStyle
+                  isActive(link.href) ? activeIconStyle : linkIconStyle
                 }
               />
 
               <motion.div
                 initial="closed"
-                animate={currentRoute === link.href ? "open" : "closed"}
-                className={`text-accent font-medium`}
+                animate={isActive(link.href) ? "open" : "closed"}
+                className={`text-accent hidden text-sm font-medium md:text-lg`}
                 variants={spanVariants}
               >
                 {link.text}

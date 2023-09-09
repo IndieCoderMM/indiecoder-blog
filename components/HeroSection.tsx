@@ -2,11 +2,12 @@ import { Post } from "@/common.types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Tag from "./Tag";
 
 const HeroSection = (post: Post) => {
   return (
     <div className="w-full">
-      <article className="relative flex h-[50vh] flex-col items-start justify-end xl:h-[85vh]">
+      <article className="relative flex h-[40vh] flex-col items-start justify-end md:h-[60vh] xl:h-[75vh]">
         <div className="absolute bottom-0 left-0 right-0 top-0 z-0 rounded-2xl bg-gradient-to-b from-transparent to-black/90" />
         <Image
           priority
@@ -16,10 +17,11 @@ const HeroSection = (post: Post) => {
           className="-z-10 h-full w-full rounded-2xl object-cover object-center lg:object-fill"
         />
 
-        <div className="z-0 flex w-full flex-col gap-4 p-4 lg:w-3/4 lg:p-8 xl:p-16">
-          <span className="text-accent text-lg font-bold">
-            #{post.categories[0].name}
-          </span>
+        <div className="z-0 flex w-full flex-col gap-1 p-4 md:gap-4 lg:w-3/4 lg:p-8 xl:p-16">
+          <Tag
+            category={post.categories[0]}
+            className="text-light bg-black/50 px-2 py-1 font-medium sm:text-lg"
+          />
 
           <Link
             href={post.externalLink ? post.externalLink : `posts/${post.slug}`}
@@ -33,9 +35,9 @@ const HeroSection = (post: Post) => {
           <p className=" font-medium text-white lg:text-2xl">{post.excerpt}</p>
           <Link
             href={post.externalLink ? post.externalLink : `posts/${post.slug}`}
-            className="border-light hover:shadow-hover text-light block max-w-[250px] rounded-full border px-8 py-2 text-center text-xl font-semibold transition-all hover:translate-x-[2px] hover:translate-y-[-2px] hover:text-white lg:px-10 lg:py-4 lg:text-2xl"
+            className="primaryBtn text-light border-light shadow-light text-lg lg:text-2xl"
           >
-            Read More
+            Read Article
           </Link>
         </div>
       </article>

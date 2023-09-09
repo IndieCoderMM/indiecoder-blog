@@ -31,7 +31,7 @@ const ContactForm = () => {
             name="message"
             id="message"
             required
-            placeholder="Write your message here..."
+            placeholder="Write your message here"
             className="inputField"
           />
           <ValidationError
@@ -63,7 +63,7 @@ const ContactForm = () => {
         />
         <button
           type="submit"
-          className="primaryBtn items-base flex justify-center gap-2"
+          className="submitBtn items-base flex justify-center gap-2"
           disabled={state.submitting}
         >
           Send

@@ -11,6 +11,7 @@ import {
 import formatDate from "@/utils/formatDate";
 import calculateReadingTime from "@/utils/calculateReadingTime";
 import Link from "next/link";
+import Tag from "@/components/Tag";
 
 export const generateStaticParams = async () => {
   const posts = await getPosts();
@@ -25,7 +26,10 @@ const PostPage = async (props: any) => {
     <>
       <article>
         <div className="mb-2 flex items-center gap-1 py-2 text-lg lg:mb-4">
-          <Link href="/" className=" text-dark-gray hover:underline">
+          <Link
+            href="/categories/all"
+            className=" text-dark-gray hover:underline"
+          >
             <span>Posts</span>
           </Link>
           <ChevronRightIcon className="h-5 w-5" />
@@ -47,7 +51,7 @@ const PostPage = async (props: any) => {
           <h1 className="mb-2 text-left text-3xl font-bold lg:text-5xl">
             {post.title}
           </h1>
-          <div className="flexStart dark:text-gray-light flex-wrap gap-8 p-3 text-sm text-slate-500 md:text-xl">
+          <div className="flexStart dark:text-gray-light flex-wrap gap-2 p-3 text-sm text-slate-500 sm:gap-4 md:gap-8 md:text-xl">
             <div className="flex items-center gap-1">
               <CalendarDaysIcon className="h-6 w-6" />
               <span className="sr-only">Published At: </span>
@@ -59,14 +63,13 @@ const PostPage = async (props: any) => {
               {calculateReadingTime(post.content)}
               <span>&nbsp;minutes</span>
             </div>
-            <ul className="flex flex-wrap items-center gap-3">
+            <ul className="flex flex-wrap items-center gap-0.5 sm:gap-3">
               {post.categories.map((category) => (
                 <li
-                  className="darkBorder bg-accent-light flex rounded-full px-3 py-1 text-xs dark:bg-transparent md:text-lg"
+                  className="darkBorder flex rounded-full px-3 py-1 text-xs dark:bg-transparent md:text-lg"
                   key={category.slug}
                 >
-                  <span className="text-bold">#</span>
-                  {category.name}
+                  <Tag category={category} />
                 </li>
               ))}
             </ul>

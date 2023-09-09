@@ -17,4 +17,6 @@ const ProjectPage = async () => {
   );
 };
 
+export const revalidate = 3600 * 1;
+
 export default ProjectPage;

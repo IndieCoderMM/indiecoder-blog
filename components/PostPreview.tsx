@@ -13,7 +13,7 @@ import calculateReadingTime from "@/utils/calculateReadingTime";
 const PostPreview = (props: Post) => {
   const iconStyle = "w-6 h-6";
   return (
-    <div className="bg-foreground border-border group relative h-full overflow-hidden rounded-xl border shadow-sm transition-all duration-75 ease-in hover:shadow-xl">
+    <article className="bg-foreground border-border group relative h-full overflow-hidden rounded-xl border shadow-sm transition-all duration-75 ease-in hover:shadow-xl">
       {props.coverImage && (
         <div className="overflow-hidden rounded-t-xl">
           <Image
@@ -31,7 +31,7 @@ const PostPreview = (props: Post) => {
           <h3>
             <Link
               href={
-                props.externalLink ? props.externalLink : `posts/${props.slug}`
+                props.externalLink ? props.externalLink : `/posts/${props.slug}`
               }
               className="expandLink"
               target={props.externalLink ? "_blank" : undefined}
@@ -80,7 +80,7 @@ const PostPreview = (props: Post) => {
           </div>
         </div>
       </section>
-    </div>
+    </article>
   );
 };
 

@@ -1,27 +1,30 @@
 import { GitHubIcon, LinkedInIcon, RepoForkedIcon } from "@/components/icons";
-import {
-  CommandLineIcon,
-  HeartIcon,
-  PencilIcon,
-} from "@heroicons/react/24/outline";
+
+import { GlobeAltIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import {
   HomeIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   CodeBracketSquareIcon,
   PuzzlePieceIcon,
-  EnvelopeIcon,
-  GlobeAltIcon,
+  CommandLineIcon,
+  HeartIcon,
+  PencilIcon,
   HashtagIcon,
-  TagIcon,
-} from "@heroicons/react/24/solid";
+} from "@heroicons/react/24/outline";
 
 export const NavLinks = [
-  { href: "/", text: "Posts", key: "posts", icon: HomeIcon },
+  { href: "/", text: "Home", key: "home", icon: HomeIcon },
   {
     href: "/about",
     text: "About",
     key: "about",
     icon: ChatBubbleOvalLeftEllipsisIcon,
+  },
+  {
+    href: "/categories/all",
+    text: "Posts",
+    key: "posts",
+    icon: HashtagIcon,
   },
   {
     href: "/projects",

@@ -3,13 +3,14 @@ import formatDate from "@/utils/formatDate";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Tag from "../Tag";
 
 const LayoutTwo = (post: Post) => {
   return (
     <div className="group relative grid grid-cols-12 gap-2">
       <Link
         href={post.externalLink ? post.externalLink : `posts/${post.slug}`}
-        className="absolute bottom-0 left-0 right-0 top-0 z-10"
+        className="z-1 absolute bottom-0 left-0 right-0 top-0"
       >
         <span className="sr-only">Read {post.title}</span>
       </Link>
@@ -23,10 +24,11 @@ const LayoutTwo = (post: Post) => {
         />
       </div>
 
-      <div className="col-span-8 flex flex-col justify-center ">
-        <span className="text-accent text-sm font-bold">
-          #{post.categories[0].name}
-        </span>
+      <div className="col-span-12 flex flex-col justify-center lg:col-span-8 ">
+        <Tag
+          className="z-10 text-sm font-medium"
+          category={post.categories[0]}
+        />
         <h1 className="text-text text-lg font-semibold leading-tight lg:text-2xl">
           <span className="from-accent to-accent bg-gradient-to-r bg-[length:0px_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_4px]">
             {post.title}

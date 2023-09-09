@@ -26,7 +26,7 @@ module.exports = {
         "light-brown": "#1e1b15",
       },
       boxShadow: {
-        hover: "-4px 4px 0 0 var(--light)",
+        hover: "-4px 4px 0 0",
       },
     },
   },

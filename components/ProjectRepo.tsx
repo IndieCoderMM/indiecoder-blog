@@ -5,7 +5,7 @@ import { Project } from "@/common.types";
 
 const ProjectRepo = (props: Project) => {
   return (
-    <div className="border-border text-text bg-foreground relative flex h-full flex-col gap-3 rounded-md border p-5 hover:shadow">
+    <article className="border-border text-text bg-foreground relative flex h-full flex-col gap-3 rounded-md border p-5 hover:shadow">
       <header className="flex flex-wrap items-center gap-1 ">
         <RepoIcon className="h-6 w-6 fill-current text-slate-400" />
         <h3>
@@ -34,7 +34,7 @@ const ProjectRepo = (props: Project) => {
           <span>{props.starCount}</span>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

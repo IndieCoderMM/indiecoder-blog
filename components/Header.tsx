@@ -1,12 +1,10 @@
-import React from "react";
-import Navbar from "./Navbar";
 import ThemeToggle from "./ThemeToggle";
 import Link from "next/link";
 import { SocialLinks } from "@/constants";
 
 const Header = () => {
   return (
-    <header className="flexBetween bg-background w-full px-2 pt-1 lg:px-4 lg:py-4 xl:px-16 xl:pt-6">
+    <header className="flexBetween bg-foreground w-full px-2 py-1 lg:px-4 lg:py-4 xl:px-16 xl:py-3">
       <h2 className="text-accent text-xl font-bold lowercase lg:text-2xl xl:text-4xl">
         <Link href="/">IndieCoder</Link>
       </h2>
@@ -19,7 +17,7 @@ const Header = () => {
             >
               <a href={link.href} target="_blank">
                 <span className="sr-only">{link.name}</span>
-                <link.icon className="hover:fill-accent fill-primary h-6 w-6 stroke-none transition-all sm:h-8 sm:w-8" />
+                <link.icon className="hover:fill-accent fill-text h-6 w-6 stroke-none transition-all sm:h-8 sm:w-8" />
               </a>
             </li>
           ))}
