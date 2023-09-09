@@ -18,7 +18,7 @@ const HeroSection = (post: Post) => {
           className="-z-10 h-full w-full object-fill sm:object-cover"
         />
 
-        <div className="bottom-0 left-0 z-0 flex w-full flex-col gap-1 bg-foreground p-4 backdrop-blur-md md:absolute md:gap-4 md:bg-white/80 md:dark:bg-black/80 lg:p-8 xl:p-16">
+        <div className="group bottom-0 left-0 z-0 flex w-full flex-col gap-1 bg-foreground p-4 backdrop-blur-md md:absolute md:gap-4 md:bg-white/80 md:dark:bg-black/80 lg:p-8 xl:p-16">
           <Tag
             category={post.categories[0]}
             className="bg-light px-2 py-1 font-medium text-text dark:bg-dark sm:text-lg"
@@ -26,9 +26,10 @@ const HeroSection = (post: Post) => {
 
           <Link
             href={post.externalLink ? post.externalLink : `posts/${post.slug}`}
+            target={post.externalLink ? "_blank" : "_self"}
           >
             <h1 className="text-xl font-bold leading-tight text-text sm:text-3xl lg:text-5xl">
-              <span className="bg-gradient-to-r from-accent to-accent bg-[length:0px_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_6px]">
+              <span className="bg-gradient-to-r from-accent to-accent bg-[length:0px_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_6px]">
                 {post.title}
               </span>
             </h1>

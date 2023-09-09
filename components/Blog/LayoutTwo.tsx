@@ -10,7 +10,8 @@ const LayoutTwo = (post: Post) => {
     <div className="group relative grid grid-cols-12 gap-2">
       <Link
         href={post.externalLink ? post.externalLink : `posts/${post.slug}`}
-        className="z-1 absolute bottom-0 left-0 right-0 top-0"
+        target={post.externalLink ? "_blank" : "_self"}
+        className="absolute bottom-0 left-0 right-0 top-0 z-10"
       >
         <span className="sr-only">Read {post.title}</span>
       </Link>
@@ -26,15 +27,15 @@ const LayoutTwo = (post: Post) => {
 
       <div className="col-span-12 flex flex-col justify-center lg:col-span-8 ">
         <Tag
-          className="z-10 text-sm font-medium"
+          className="z-20 text-sm font-medium"
           category={post.categories[0]}
         />
-        <h1 className="text-text text-lg font-semibold leading-tight lg:text-2xl">
-          <span className="from-accent to-accent bg-gradient-to-r bg-[length:0px_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_4px]">
+        <h1 className="text-lg font-semibold leading-tight text-text lg:text-2xl">
+          <span className="bg-gradient-to-r from-accent to-accent bg-[length:0px_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_4px]">
             {post.title}
           </span>
         </h1>
-        <p className="text-text hidden xl:block">{post.excerpt}</p>
+        <p className="hidden text-text xl:block">{post.excerpt}</p>
         <p className=" text-gray-light">{formatDate(post.originalDate)}</p>
       </div>
     </div>
