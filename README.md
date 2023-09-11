@@ -2,6 +2,8 @@
 
 Welcome to the repository for my personal blog website. This project contains all the code and resources for my blog. Feel free to visit my blog at [www.indiecoder.tech](https://www.indiecoder.tech/). I'm excited to hear your thoughts and feedback! 
 
+<img src="./app_screenshot.png" width=650 height=420 />
+
 ## Tech Stack 
 
 - Next.js + TypeScript + TailwindCSS
@@ -46,12 +48,14 @@ If you encounter any issues, have questions with anything related to the blog or
 
 ## Inspiration
 
-- This project was inspired by [Tania Rascia's Website](https://www.taniarascia.com/)
-- UI design is based on the awesome [Hugo Theme Luna](https://github.com/Ice-Hazymoon/hugo-theme-luna) 
+This project was inspired by these awesome websites:
+
+- [Tania Rascia's Website](https://www.taniarascia.com/)
+- [Next.js Blog](https://create-blog-with-nextjs.vercel.app/)
+- [Hugo Theme Luna](https://github.com/Ice-Hazymoon/hugo-theme-luna) 
 
 ## License
 
 This project is open-source and licensed under the [MIT License](./LICENSE).
 
 Happy coding! 🚀
-
