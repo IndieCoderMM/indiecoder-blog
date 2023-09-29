@@ -1,12 +1,11 @@
 import { Post } from "@/common.types";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import Tag from "./Tag";
 
 const HeroSection = (post: Post) => {
   return (
-    <div className="w-full">
+    <div className="w-full px-0 lg:px-8 xl:px-16">
       <article className="relative flex flex-col items-start justify-end overflow-hidden rounded-2xl">
         {/* <div className="absolute bottom-0 left-0 right-0 top-0 z-0 hidden rounded-2xl bg-gradient-to-b from-transparent to-black/90 md:block" /> */}
         <Image

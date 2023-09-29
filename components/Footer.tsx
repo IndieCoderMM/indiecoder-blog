@@ -14,7 +14,7 @@ const Footer = () => {
               <li className="text-lg text-dark hover:underline" key={link.name}>
                 <a href={link.href} target="_blank">
                   <span className="sr-only">{link.name}</span>
-                  <link.icon className="h-8 w-8 fill-light stroke-none transition-all hover:fill-accent sm:h-10 sm:w-10" />
+                  <link.icon className="h-8 w-8 fill-light stroke-none transition-all hover:translate-y-[-2px] hover:fill-accent sm:h-10 sm:w-10" />
                 </a>
               </li>
             ))}

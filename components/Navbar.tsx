@@ -51,7 +51,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="border-border bg-foreground sticky top-0 z-50 w-full border-b py-2 md:px-4 lg:fixed lg:left-1/2 lg:top-2 lg:max-w-fit lg:translate-x-[-50%] lg:rounded-full lg:border">
+    <nav className="sticky top-0 z-50 w-full bg-foreground py-2 md:px-4 lg:fixed lg:left-1/2 lg:top-2 lg:max-w-fit lg:translate-x-[-50%] lg:rounded-full">
       <ul className="flex w-full items-center justify-around">
         {NavLinks.map((link) => (
           <motion.li
@@ -73,7 +73,7 @@ const Navbar = () => {
               <motion.div
                 initial="closed"
                 animate={isActive(link.href) ? "open" : "closed"}
-                className={`text-accent hidden text-sm font-medium md:text-lg`}
+                className={`hidden text-sm font-medium text-accent md:text-lg`}
                 variants={spanVariants}
               >
                 {link.text}
